@@ -2,37 +2,37 @@
 function Break() {
   document.querySelectorAll("break").forEach(b => {
     const div = document.createElement("br");
-    b.parentNode.replaceChild(div, b);
+    b.parentNode?.replaceChild(div, b);
   });
 }
 
 
-function ExtraBreak(counter = 2) {
+function Extra_Break(counter = 2) {
   document.querySelectorAll("extra-break").forEach(b => {
     const fragment = document.createDocumentFragment();
     for(let i = 0; i < counter; i++){
         const div = document.createElement("br");
         fragment.appendChild(div);
     }
-    b.parentNode.replaceChild(fragment, b);
+    b.parentNode?.replaceChild(fragment, b);
   });
 }
 
-function CustomBreak() {
+function Custom_Break() {
   document.querySelectorAll("custom-break").forEach(b => {
     const fragment = document.createDocumentFragment();
-    const howMany = parseInt(b.getAttribute("n"));
+    const howMany = parseInt(b.getAttribute("n") || "0");
     for(let i = 0; i < howMany; i++){
         const div = document.createElement("br");
         fragment.appendChild(div);
     }
-    b.parentNode.replaceChild(fragment, b);
+    b.parentNode?.replaceChild(fragment, b);
   });
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
   Break(); 
-  ExtraBreak();
-  CustomBreak();
+  Extra_Break();
+  Custom_Break();
 });
