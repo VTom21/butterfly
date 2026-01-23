@@ -1,0 +1,501 @@
+.text-10 {
+  color: rgb(61, 60, 60);
+  opacity: 10%;
+}
+
+.text-20 {
+  color: rgb(61, 60, 60);
+  opacity: 20%;
+}
+
+.text-30 {
+  color: rgb(61, 60, 60);
+  opacity: 30%;
+}
+
+.text-40 {
+  color: rgb(61, 60, 60);
+  opacity: 40%;
+}
+
+.text-50 {
+  color: rgb(61, 60, 60);
+  opacity: 50%;
+}
+
+.text-60 {
+  color: rgb(61, 60, 60);
+  opacity: 60%;
+}
+
+.text-70 {
+  color: rgb(61, 60, 60);
+  opacity: 70%;
+}
+
+.text-80 {
+  color: rgb(61, 60, 60);
+  opacity: 80%;
+}
+
+.text-90 {
+  color: rgb(61, 60, 60);
+  opacity: 90%;
+}
+
+.danger-10 {
+  color: rgb(230, 83, 83);
+  opacity: 10%;
+}
+
+.danger-20 {
+  color: rgb(230, 83, 83);
+  opacity: 20%;
+}
+
+.danger-30 {
+  color: rgb(230, 83, 83);
+  opacity: 30%;
+}
+
+.danger-40 {
+  color: rgb(230, 83, 83);
+  opacity: 40%;
+}
+
+.danger-50 {
+  color: rgb(230, 83, 83);
+  opacity: 50%;
+}
+
+.danger-60 {
+  color: rgb(230, 83, 83);
+  opacity: 60%;
+}
+
+.danger-70 {
+  color: rgb(230, 83, 83);
+  opacity: 70%;
+}
+
+.danger-80 {
+  color: rgb(230, 83, 83);
+  opacity: 80%;
+}
+
+.danger-90 {
+  color: rgb(230, 83, 83);
+  opacity: 90%;
+}
+
+.success-10 {
+  color: #28A745;
+  opacity: 10%;
+}
+
+.success-20 {
+  color: #28A745;
+  opacity: 20%;
+}
+
+.success-30 {
+  color: #28A745;
+  opacity: 30%;
+}
+
+.success-40 {
+  color: #28A745;
+  opacity: 40%;
+}
+
+.success-50 {
+  color: #28A745;
+  opacity: 50%;
+}
+
+.success-60 {
+  color: #28A745;
+  opacity: 60%;
+}
+
+.success-70 {
+  color: #28A745;
+  opacity: 70%;
+}
+
+.success-80 {
+  color: #28A745;
+  opacity: 80%;
+}
+
+.success-90 {
+  color: #28A745;
+  opacity: 90%;
+}
+
+.info-10 {
+  color: #17A2B8;
+  opacity: 10%;
+}
+
+.info-20 {
+  color: #17A2B8;
+  opacity: 20%;
+}
+
+.info-30 {
+  color: #17A2B8;
+  opacity: 30%;
+}
+
+.info-40 {
+  color: #17A2B8;
+  opacity: 40%;
+}
+
+.info-50 {
+  color: #17A2B8;
+  opacity: 50%;
+}
+
+.info-60 {
+  color: #17A2B8;
+  opacity: 60%;
+}
+
+.info-70 {
+  color: #17A2B8;
+  opacity: 70%;
+}
+
+.info-80 {
+  color: #17A2B8;
+  opacity: 80%;
+}
+
+.info-90 {
+  color: #17A2B8;
+  opacity: 90%;
+}
+
+.warning-10 {
+  color: #FFC107;
+  opacity: 10%;
+}
+
+.warning-20 {
+  color: #FFC107;
+  opacity: 20%;
+}
+
+.warning-30 {
+  color: #FFC107;
+  opacity: 30%;
+}
+
+.warning-40 {
+  color: #FFC107;
+  opacity: 40%;
+}
+
+.warning-50 {
+  color: #FFC107;
+  opacity: 50%;
+}
+
+.warning-60 {
+  color: #FFC107;
+  opacity: 60%;
+}
+
+.warning-70 {
+  color: #FFC107;
+  opacity: 70%;
+}
+
+.warning-80 {
+  color: #FFC107;
+  opacity: 80%;
+}
+
+.warning-90 {
+  color: #FFC107;
+  opacity: 90%;
+}
+
+.primary-10 {
+  color: #007BFF;
+  opacity: 10%;
+}
+
+.primary-20 {
+  color: #007BFF;
+  opacity: 20%;
+}
+
+.primary-30 {
+  color: #007BFF;
+  opacity: 30%;
+}
+
+.primary-40 {
+  color: #007BFF;
+  opacity: 40%;
+}
+
+.primary-50 {
+  color: #007BFF;
+  opacity: 50%;
+}
+
+.primary-60 {
+  color: #007BFF;
+  opacity: 60%;
+}
+
+.primary-70 {
+  color: #007BFF;
+  opacity: 70%;
+}
+
+.primary-80 {
+  color: #007BFF;
+  opacity: 80%;
+}
+
+.primary-90 {
+  color: #007BFF;
+  opacity: 90%;
+}
+
+.secondary-10 {
+  color: #6C757D;
+  opacity: 10%;
+}
+
+.secondary-20 {
+  color: #6C757D;
+  opacity: 20%;
+}
+
+.secondary-30 {
+  color: #6C757D;
+  opacity: 30%;
+}
+
+.secondary-40 {
+  color: #6C757D;
+  opacity: 40%;
+}
+
+.secondary-50 {
+  color: #6C757D;
+  opacity: 50%;
+}
+
+.secondary-60 {
+  color: #6C757D;
+  opacity: 60%;
+}
+
+.secondary-70 {
+  color: #6C757D;
+  opacity: 70%;
+}
+
+.secondary-80 {
+  color: #6C757D;
+  opacity: 80%;
+}
+
+.secondary-90 {
+  color: #6C757D;
+  opacity: 90%;
+}
+
+.pink-10 {
+  color: #FF2D55;
+  opacity: 10%;
+}
+
+.pink-20 {
+  color: #FF2D55;
+  opacity: 20%;
+}
+
+.pink-30 {
+  color: #FF2D55;
+  opacity: 30%;
+}
+
+.pink-40 {
+  color: #FF2D55;
+  opacity: 40%;
+}
+
+.pink-50 {
+  color: #FF2D55;
+  opacity: 50%;
+}
+
+.pink-60 {
+  color: #FF2D55;
+  opacity: 60%;
+}
+
+.pink-70 {
+  color: #FF2D55;
+  opacity: 70%;
+}
+
+.pink-80 {
+  color: #FF2D55;
+  opacity: 80%;
+}
+
+.pink-90 {
+  color: #FF2D55;
+  opacity: 90%;
+}
+
+.purple-10 {
+  color: #AF52DE;
+  opacity: 10%;
+}
+
+.purple-20 {
+  color: #AF52DE;
+  opacity: 20%;
+}
+
+.purple-30 {
+  color: #AF52DE;
+  opacity: 30%;
+}
+
+.purple-40 {
+  color: #AF52DE;
+  opacity: 40%;
+}
+
+.purple-50 {
+  color: #AF52DE;
+  opacity: 50%;
+}
+
+.purple-60 {
+  color: #AF52DE;
+  opacity: 60%;
+}
+
+.purple-70 {
+  color: #AF52DE;
+  opacity: 70%;
+}
+
+.purple-80 {
+  color: #AF52DE;
+  opacity: 80%;
+}
+
+.purple-90 {
+  color: #AF52DE;
+  opacity: 90%;
+}
+
+.brown-10 {
+  color: rgb(167, 54, 54);
+  opacity: 10%;
+}
+
+.brown-20 {
+  color: rgb(167, 54, 54);
+  opacity: 20%;
+}
+
+.brown-30 {
+  color: rgb(167, 54, 54);
+  opacity: 30%;
+}
+
+.brown-40 {
+  color: rgb(167, 54, 54);
+  opacity: 40%;
+}
+
+.brown-50 {
+  color: rgb(167, 54, 54);
+  opacity: 50%;
+}
+
+.brown-60 {
+  color: rgb(167, 54, 54);
+  opacity: 60%;
+}
+
+.brown-70 {
+  color: rgb(167, 54, 54);
+  opacity: 70%;
+}
+
+.brown-80 {
+  color: rgb(167, 54, 54);
+  opacity: 80%;
+}
+
+.brown-90 {
+  color: rgb(167, 54, 54);
+  opacity: 90%;
+}
+
+.text {
+  color: rgb(61, 60, 60);
+}
+
+.danger {
+  color: rgb(230, 83, 83);
+}
+
+.success {
+  color: #28A745;
+}
+
+.info {
+  color: #17A2B8;
+}
+
+.warning {
+  color: #FFC107;
+}
+
+.primary {
+  color: #007BFF;
+}
+
+.secondary {
+  color: #6C757D;
+}
+
+.pink {
+  color: #FF2D55;
+}
+
+.purple {
+  color: #AF52DE;
+}
+
+.brown {
+  color: rgb(167, 54, 54);
+}
+
+.rainbow {
+  font-weight: bold;
+  font-size: 2em;
+  background: linear-gradient(90deg, red 0%, orange 16.66%, yellow 33.33%, green 50%, blue 66.66%, indigo 83.33%, violet 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: var(--offset) 10%;
+  background-repeat: repeat;
+}/*# sourceMappingURL=colors.css.map */
