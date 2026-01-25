@@ -1,0 +1,19 @@
+$sizes: (
+    "heading1": 3rem,
+    "heading2": 2.75rem,
+    "heading3": 2.5rem,
+    "heading4": 2rem,
+    "heading5": 1.75rem,
+    "heading6": 1.5rem,
+    "heading7": 1rem,
+    "heading8": 0.75rem,
+    "heading9": 0.5rem,
+);
+
+@each $name, $size in $sizes{
+    .#{$name}{
+        font-size: $size;
+    }
+}
+
+
