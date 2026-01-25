@@ -1,19 +1,148 @@
-$sizes: (
-    "heading1": 3rem,
-    "heading2": 2.75rem,
-    "heading3": 2.5rem,
-    "heading4": 2rem,
-    "heading5": 1.75rem,
-    "heading6": 1.5rem,
-    "heading7": 1rem,
-    "heading8": 0.75rem,
-    "heading9": 0.5rem,
-);
+@use "../font-library/fonts.scss";
 
-@each $name, $size in $sizes{
-    .#{$name}{
-        font-size: $size;
+@mixin generate($map, $prefix, $property) {
+  @each $name, $value in $map {
+    .#{$prefix}-#{$name} {
+      #{$property}: $value;
     }
+  }
 }
 
+$sizes: (
+  "heading1": 3rem,
+  "heading2": 2.5rem,
+  "heading3": 2rem,
+  "heading4": 1.5rem,
+  "heading5": 1.25rem,
+  "heading6": 1rem,
+  "heading7": 0.875rem,
+  "heading8": 0.75rem,
+  "heading9": 0.625rem,
+);
 
+@each $name, $size in $sizes {
+  .#{$name} {
+    font-size: $size;
+  }
+}
+
+//Text Alignment
+
+$alignments: (
+  "left": left,
+  "right": right,
+  "middle": center,
+  "end": right,
+  "start": left,
+);
+
+$floats: (
+  "left": left,
+  "right": right,
+  "end": right,
+  "start": left,
+  "disable": "none",
+);
+
+
+//Text Transformation
+
+$transformations: (
+  "upper": uppercase,
+  "lower": lowercase,
+  "cap": capitalize,
+  "reset": none,
+);
+
+
+//Text Weight
+
+$weights: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "thick": 600,
+  "extra-thick": 700,
+  "bold": 800,
+  "extra-bold": 900,
+  "100": 100,
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+  "900": 900,
+);
+
+
+//Text Decorations
+
+$decorations: (
+  "strike": line-through,
+  "cross": line-through,
+  "slash": line-through,
+  "underline": underline,
+  "underline-dots": underline dotted,
+  "underline-dash": underline dashed,
+  "underline-waves": underline wavy,
+  "overline": overline,
+  "overline-dots": overline dotted,
+  "overline-dash": overline dashed,
+  "overline-waves": overline wavy,
+  "disabled": none,
+);
+
+
+
+//Font Styles
+
+$styles: (
+  "i": italic,
+  "o": oblique,
+  "n": normal,
+);
+
+
+.fs-flip-x {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.fs-flip-y {
+  transform: scaleY(-1);
+  display: inline-block;
+}
+
+$letter-spacing: (
+  "tightest": -0.08em,
+  "tighter": -0.05em,
+  "tight": -0.025em,
+
+  "normal": 0,
+
+  "wide": 0.025em,
+  "wider": 0.05em,
+  "widest": 0.1em,
+);
+
+$line-height: (
+    "tiny": 0.25,
+    "min": 0.5,
+    "semi-base": 1,
+    "medium" : 1.25,
+    "base": 1.5,
+    "xl": 1.75,
+    "xxl": 2
+);
+
+@include generate($alignments,"t","text-align");
+@include generate($floats,"fl","float");
+@include generate($transformations,"t","text-transform");
+@include generate($weights,"fw","font-weight");
+@include generate($decorations,"td","text-decoration");
+@include generate($styles,"fs","font-style");
+@include generate($letter-spacing,"ls","letter-spacing");
+@include generate($line-height,"lh","line-height");
