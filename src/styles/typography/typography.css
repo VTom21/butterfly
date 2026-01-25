@@ -92,19 +92,19 @@
   float: "none";
 }
 
-.t-upper {
+.tt-upper {
   text-transform: uppercase;
 }
 
-.t-lower {
+.tt-lower {
   text-transform: lowercase;
 }
 
-.t-cap {
+.tt-cap {
   text-transform: capitalize;
 }
 
-.t-reset {
+.tt-reset {
   text-transform: none;
 }
 

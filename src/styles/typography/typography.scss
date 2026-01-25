@@ -140,7 +140,7 @@ $line-height: (
 
 @include generate($alignments,"t","text-align");
 @include generate($floats,"fl","float");
-@include generate($transformations,"t","text-transform");
+@include generate($transformations,"tt","text-transform");
 @include generate($weights,"fw","font-weight");
 @include generate($decorations,"td","text-decoration");
 @include generate($styles,"fs","font-style");
