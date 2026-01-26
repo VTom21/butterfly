@@ -1,0 +1,25 @@
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate_for($property,$prefix, $n, $quantity){
+    @for $n from 0 through $n {
+        .#{$prefix}-#{$n} {
+            #{$property}: #{$n}#{$quantity};
+        }
+    }
+}
+
+
+
+@include generate_for("width", "w-px", 2000, px); //Width (px)
+@include generate_for("width", "w-perc", 100, "%"); //Width (%)
+@include generate_for("width", "w-vh", 100, vh); //Width (vh)
+
+@include generate_for("height", "h-px", 2000, px); //Height (px)
+@include generate_for("height", "h-perc", 100, "%"); //Height (%)
+@include generate_for("height", "h-vh", 100, vh); //Height (vh)

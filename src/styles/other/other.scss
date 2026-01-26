@@ -118,7 +118,6 @@ $flex-wrap: (
 
 
 
-
 @include generate($visibility, "vs", "visibility");
 @include generate($display, "show", "display");
 @include generate_for("gap", "space", 300); //Gaps

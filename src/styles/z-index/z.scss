@@ -1,0 +1,10 @@
+@mixin generate_for($property,$prefix, $n){
+    @for $n from 0 through $n {
+        .#{$prefix}-#{$n} {
+            #{$property}: #{$n};
+        }
+    }
+}
+
+
+@include generate_for("z-index","z", 9999);
