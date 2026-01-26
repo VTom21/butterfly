@@ -1,37 +1,164 @@
-@mixin generate_for($property,$prefix, $n, $quantity){
-    @for $n from 0 through $n {
-        .#{$prefix}-#{$n} {
-            #{$property}: #{$n}#{$quantity};
-        }
-    }
-}
+@use "sass:map";
+@use "../colors/colors.scss" as color-file;
 
-@mixin generate($map, $prefix, $property) {
-    @each $name, $value in $map {
-        .#{$prefix}-#{$name} {
-            #{$property}: $value;
-        }
-    }
-}
-
-
-
-.b{
-    border: 1px solid rgb(61, 60, 60);
-}
+$colors: color-file.$colors;
 
 $directions: (
-    "top": 1px solid rgb(61, 60, 60),
-    "bottom": 1px solid rgb(61, 60, 60),
-    "left": 1px solid rgb(61, 60, 60),
-    "right": 1px solid rgb(61, 60, 60)
+  "top": top,
+  "bottom": bottom,
+  "left": left,
+  "right": right,
 );
 
+.b {
+  border: 1px solid;
+}
 
+.b-top {
+  border-top: 1px solid;
+}
 
+.b-bottom {
+  border-bottom: 1px solid;
+}
 
-@include generate_for("border-radius", "br", 100, "%");
-@include generate($directions,"b", "border-right");
-@include generate($directions,"b", "border-left");
-@include generate($directions,"b", "border-top");
-@include generate($directions,"b", "border-bottom");
+.b-left {
+  border-left: 1px solid;
+}
+
+.b-right {
+  border-right: 1px solid;
+}
+
+//Border Colors
+
+@each $name, $color in $colors {
+  .b-#{$name} {
+    border-color: #{$color};
+  }
+}
+
+//Border Width
+
+@for $i from 1 through 6 {
+  .b-#{$i} {
+    border-width: #{$i}px;
+  }
+
+  @each $name, $direction in $directions {
+    .b-#{$direction}-#{$i} {
+      border-#{$direction}-width: #{$i}px;
+    }
+  }
+}
+
+//Border Radius
+
+$radius_px: (
+  1: 2px,
+  2: 4px,
+  3: 8px,
+  4: 12px,
+  5: 16px,
+  6: 24px,
+  7: 32px,
+  pill: 9999px,
+);
+
+$radius_perc: (
+  "circle": 50%,
+  "circle-halve": 25%,
+  "oval": 100%,
+);
+
+@each $key, $value in $radius_px {
+  .br-#{$key} {
+    border-radius: $value;
+  }
+}
+
+@each $key, $value in $radius_perc {
+  .br-#{$key} {
+    border-radius: $value;
+  }
+}
+
+$corners: (
+  tl: border-top-left-radius,
+  tr: border-top-right-radius,
+  bl: border-bottom-left-radius,
+  br: border-bottom-right-radius,
+);
+
+$sides: (
+  "t": (
+    tl,
+    tr,
+  ),
+  "b": (
+    bl,
+    br,
+  ),
+  "l": (
+    tl,
+    bl,
+  ),
+  "r": (
+    tr,
+    br,
+  ),
+);
+
+@each $name, $corner in $corners {
+  @each $size, $value in $radius_px {
+    .br-#{$name}-#{$size} {
+      #{$corner}: $value;
+    }
+  }
+}
+
+@each $side, $corner-list in $sides {
+  @each $size, $value in $radius_px {
+    .br-#{$side}-#{$size} {
+      @each $corner in $corner-list {
+        #{map.get($corners, $corner)}: $value;
+      }
+    }
+  }
+}
+
+//Border Styles
+
+$styles: (
+  "dash": dashed,
+  "dots": dotted,
+  "double": double,
+  "disabled": hidden,
+  "ridge": ridge,
+  "hip": groove,
+);
+
+@each $name, $value in $styles {
+  .bs-#{$name} {
+    border-style: $value;
+  }
+
+  @each $name2, $direction in $directions {
+    .bs-#{$name2}-#{$name} {
+      border-#{$direction}-style: $value;
+    }
+  }
+}
+
+//Border Collapsing
+
+$collapse: (
+  "fall": collapse,
+  "isolate": separate,
+);
+
+@each $key, $value in $collapse {
+  .bc-#{$key} {
+    border-collapse: $value;
+  }
+}
