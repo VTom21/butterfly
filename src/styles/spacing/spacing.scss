@@ -1,0 +1,43 @@
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+      .#{$prefix}-#{$name} {
+        #{$property}: $value;
+      }
+    }
+  }
+
+
+$margins: (
+  0: 0,
+  1: 0.25rem, 
+  2: 0.5rem,  
+  3: 1rem,    
+  4: 1.5rem,  
+  5: 3rem,    
+  default: auto
+);
+
+$paddings: (
+  0: 0,
+  1: 0.25rem, 
+  2: 0.5rem,  
+  3: 1rem,    
+  4: 1.5rem,  
+  5: 3rem,    
+  default: auto
+);
+
+
+@include generate($margins,"m","margin");
+@include generate($margins,"mt","margin-top");
+@include generate($margins,"mb","margin-bottom");
+@include generate($margins,"mr","margin-right");
+@include generate($margins,"ml","margin-left");
+
+@include generate($margins,"p","padding");
+@include generate($margins,"pt","padding-top");
+@include generate($margins,"pb","padding-bottom");
+@include generate($margins,"pr","padding-right");
+@include generate($margins,"pl","padding-left");
+
+

@@ -1,0 +1,59 @@
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate_for($property,$prefix, $n){
+    @for $n from 0 through $n {
+        .#{$prefix}-#{$n} {
+            #{$property}: #{$n}px;
+        }
+    }
+}
+
+//Visibility States
+
+$visibility: (
+    "seen": visible,
+    "not-seen": hidden
+);
+
+//Displays
+
+$display: (
+    "flex": flex,
+    "grid": grid,
+    "block": block,
+    "inline": inline,
+    "inline-flex": inline-flex,
+    "inline-block": inline-block,
+    "flexbox": flexbox,
+    "inline-flexbox": inline-flexbox,
+    "disabled": none
+);
+
+//Positions
+
+$positions: (
+    "rel": relative,
+    "abso": absolute,
+    "fix": fixed,
+    "constant": sticky,
+    "stat": static
+);
+
+
+
+
+@include generate($visibility, "vs", "visibility");
+@include generate($display, "show", "display");
+@include generate_for("gap", "space", 300); //Gaps
+@include generate($positions, "pos", "position");
+//Absolute Positions
+@include generate_for("top", "top", 2000); 
+@include generate_for("bottom", "bottom", 2000); 
+@include generate_for("left", "left", 2000); 
+@include generate_for("right", "right", 2000); 
