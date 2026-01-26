@@ -34668,4 +34668,316 @@
   right: 2000px;
 }
 
+.jc-cent {
+  justify-content: center;
+}
+
+.jc-base {
+  justify-content: baseline;
+}
+
+.jc-right {
+  justify-content: right;
+}
+
+.jc-left {
+  justify-content: left;
+}
+
+.jc-end {
+  justify-content: end;
+}
+
+.jc-sp-around {
+  justify-content: space-around;
+}
+
+.jc-sp-between {
+  justify-content: space-between;
+}
+
+.jc-sp-even {
+  justify-content: space-evenly;
+}
+
+.jc-extend {
+  justify-content: stretch;
+}
+
+.jc-fbase {
+  justify-content: first baseline;
+}
+
+.jc-lbase {
+  justify-content: last baseline;
+}
+
+.jc-flx-start {
+  justify-content: flex-start;
+}
+
+.jc-flx-end {
+  justify-content: flex-end;
+}
+
+.jc-normal {
+  justify-content: normal;
+}
+
+.ji-start {
+  justify-items: start;
+}
+
+.ji-end {
+  justify-items: end;
+}
+
+.ji-cent {
+  justify-items: center;
+}
+
+.ji-extend {
+  justify-items: stretch;
+}
+
+.ji-normal {
+  justify-items: normal;
+}
+
+.ji-base {
+  justify-items: baseline;
+}
+
+.ji-fbase {
+  justify-items: first baseline;
+}
+
+.ji-lbase {
+  justify-items: last baseline;
+}
+
+.ji-flx-start {
+  justify-items: flex-start;
+}
+
+.ji-flx-end {
+  justify-items: flex-end;
+}
+
+.js-start {
+  justify-self: start;
+}
+
+.js-end {
+  justify-self: end;
+}
+
+.js-cent {
+  justify-self: center;
+}
+
+.js-extend {
+  justify-self: stretch;
+}
+
+.js-auto {
+  justify-self: auto;
+}
+
+.js-base {
+  justify-self: baseline;
+}
+
+.js-normal {
+  justify-self: normal;
+}
+
+.js-fbase {
+  justify-self: first baseline;
+}
+
+.js-lbase {
+  justify-self: last baseline;
+}
+
+.js-flx-start {
+  justify-self: flex-start;
+}
+
+.js-flx-end {
+  justify-self: flex-end;
+}
+
+.js-right {
+  justify-self: right;
+}
+
+.js-left {
+  justify-self: left;
+}
+
+.flx-dir-col {
+  flex-direction: column;
+}
+
+.flx-dir-col-rev {
+  flex-direction: column-reverse;
+}
+
+.flx-dir-row {
+  flex-direction: row;
+}
+
+.flx-dir-row-rev {
+  flex-direction: row-reverse;
+}
+
+.flx-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flx-wrap-wrap-rev {
+  flex-wrap: wrap-reverse;
+}
+
+.flx-wrap-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.vertical-set-start {
+  align-items: start;
+}
+
+.vertical-set-end {
+  align-items: end;
+}
+
+.vertical-set-cent {
+  align-items: center;
+}
+
+.vertical-set-extend {
+  align-items: stretch;
+}
+
+.vertical-set-normal {
+  align-items: normal;
+}
+
+.vertical-set-base {
+  align-items: baseline;
+}
+
+.vertical-set-fbase {
+  align-items: first baseline;
+}
+
+.vertical-set-lbase {
+  align-items: last baseline;
+}
+
+.vertical-set-flx-start {
+  align-items: flex-start;
+}
+
+.vertical-set-flx-end {
+  align-items: flex-end;
+}
+
+.vertical-self-start {
+  align-self: start;
+}
+
+.vertical-self-end {
+  align-self: end;
+}
+
+.vertical-self-cent {
+  align-self: center;
+}
+
+.vertical-self-extend {
+  align-self: stretch;
+}
+
+.vertical-self-normal {
+  align-self: normal;
+}
+
+.vertical-self-base {
+  align-self: baseline;
+}
+
+.vertical-self-fbase {
+  align-self: first baseline;
+}
+
+.vertical-self-lbase {
+  align-self: last baseline;
+}
+
+.vertical-self-flx-start {
+  align-self: flex-start;
+}
+
+.vertical-self-flx-end {
+  align-self: flex-end;
+}
+
+.vertical-content-cent {
+  align-content: center;
+}
+
+.vertical-content-base {
+  align-content: baseline;
+}
+
+.vertical-content-right {
+  align-content: right;
+}
+
+.vertical-content-left {
+  align-content: left;
+}
+
+.vertical-content-end {
+  align-content: end;
+}
+
+.vertical-content-sp-around {
+  align-content: space-around;
+}
+
+.vertical-content-sp-between {
+  align-content: space-between;
+}
+
+.vertical-content-sp-even {
+  align-content: space-evenly;
+}
+
+.vertical-content-extend {
+  align-content: stretch;
+}
+
+.vertical-content-fbase {
+  align-content: first baseline;
+}
+
+.vertical-content-lbase {
+  align-content: last baseline;
+}
+
+.vertical-content-flx-start {
+  align-content: flex-start;
+}
+
+.vertical-content-flx-end {
+  align-content: flex-end;
+}
+
+.vertical-content-normal {
+  align-content: normal;
+}
+
 /*# sourceMappingURL=bundle.min.css.map */

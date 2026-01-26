@@ -45,6 +45,77 @@ $positions: (
     "stat": static
 );
 
+//Justify-Content
+
+$justify: (
+    "cent": center,
+    "base": baseline,
+    "right": right,
+    "left": left,
+    "end": end,
+    "sp-around": space-around,
+    "sp-between": space-between,
+    "sp-even": space-evenly,
+    "extend": stretch,
+    "fbase":  first baseline,
+    "lbase": last baseline,
+    "flx-start": flex-start,
+    "flx-end": flex-end,
+    "normal": normal
+);
+
+
+//Justify-Items
+
+$justify-items: (
+  "start": start,
+  "end": end,
+  "cent": center,
+  "extend": stretch,
+  "normal": normal,
+  "base": baseline,
+  "fbase":  first baseline,
+  "lbase": last baseline,
+  "flx-start": flex-start,
+  "flx-end": flex-end,
+);
+
+//Justify-Self
+
+$justify-self: (
+  "start": start,
+  "end": end,
+  "cent": center,
+  "extend": stretch,
+  "auto": auto,
+  "base": baseline,
+  "normal": normal,
+  "fbase":  first baseline,
+  "lbase": last baseline,
+  "flx-start": flex-start,
+  "flx-end": flex-end,
+  "right": right,
+  "left": left,
+);
+
+//Flex Direction
+
+
+$flex-direction: (
+    "col": column,
+    "col-rev": column-reverse,
+    "row": row,
+    "row-rev": row-reverse
+);
+
+//Flex Wrap
+
+$flex-wrap: (
+    "wrap": wrap,
+    "wrap-rev": wrap-reverse,
+    "no-wrap": nowrap 
+);
+
 
 
 
@@ -57,3 +128,15 @@ $positions: (
 @include generate_for("bottom", "bottom", 2000); 
 @include generate_for("left", "left", 2000); 
 @include generate_for("right", "right", 2000); 
+
+@include generate($justify, "jc", "justify-content");
+@include generate($justify-items, "ji", "justify-items");
+@include generate($justify-self, "js", "justify-self");
+
+@include generate($flex-direction, "flx-dir", "flex-direction");
+
+@include generate($flex-wrap, "flx-wrap", "flex-wrap");
+
+@include generate($justify-items, "vertical-set", "align-items"); //Align-Items
+@include generate($justify-items, "vertical-self", "align-self"); //Align-Self
+@include generate($justify, "vertical-content", "align-content"); //Align-Content
