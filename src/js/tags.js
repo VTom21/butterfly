@@ -1,4 +1,5 @@
 
+
 function Break() {
   document.querySelectorAll("break").forEach(b => {
     const div = document.createElement("br");
@@ -36,6 +37,7 @@ document.querySelectorAll('.rainbow').forEach(el => {
     el.style.setProperty('--offset', offset);
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   Break(); 

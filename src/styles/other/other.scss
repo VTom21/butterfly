@@ -6,13 +6,15 @@
     }
 }
 
-@mixin generate_for($property,$prefix, $n){
+@mixin generate_for($property,$prefix, $n, $quantity){
     @for $n from 0 through $n {
         .#{$prefix}-#{$n} {
-            #{$property}: #{$n}px;
+            #{$property}: #{$n}#{$quantity};
         }
     }
 }
+
+
 
 //Visibility States
 
@@ -118,15 +120,17 @@ $flex-wrap: (
 
 
 
+
+
 @include generate($visibility, "vs", "visibility");
 @include generate($display, "show", "display");
-@include generate_for("gap", "space", 300); //Gaps
+@include generate_for("gap", "space", 300, px); //Gaps
 @include generate($positions, "pos", "position");
 //Absolute Positions
-@include generate_for("top", "top", 2000); 
-@include generate_for("bottom", "bottom", 2000); 
-@include generate_for("left", "left", 2000); 
-@include generate_for("right", "right", 2000); 
+@include generate_for("top", "top", 2000, px); 
+@include generate_for("bottom", "bottom", 2000, px); 
+@include generate_for("left", "left", 2000, px); 
+@include generate_for("right", "right", 2000, px); 
 
 @include generate($justify, "jc", "justify-content");
 @include generate($justify-items, "ji", "justify-items");
@@ -139,3 +143,5 @@ $flex-wrap: (
 @include generate($justify-items, "vertical-set", "align-items"); //Align-Items
 @include generate($justify-items, "vertical-self", "align-self"); //Align-Self
 @include generate($justify, "vertical-content", "align-content"); //Align-Content
+
+@include generate_for("opacity", "o", 100, "%"); //Opacity

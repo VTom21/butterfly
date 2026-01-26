@@ -1,0 +1,37 @@
+@mixin generate_for($property,$prefix, $n, $quantity){
+    @for $n from 0 through $n {
+        .#{$prefix}-#{$n} {
+            #{$property}: #{$n}#{$quantity};
+        }
+    }
+}
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+        }
+    }
+}
+
+
+
+.b{
+    border: 1px solid rgb(61, 60, 60);
+}
+
+$directions: (
+    "top": 1px solid rgb(61, 60, 60),
+    "bottom": 1px solid rgb(61, 60, 60),
+    "left": 1px solid rgb(61, 60, 60),
+    "right": 1px solid rgb(61, 60, 60)
+);
+
+
+
+
+@include generate_for("border-radius", "br", 100, "%");
+@include generate($directions,"b", "border-right");
+@include generate($directions,"b", "border-left");
+@include generate($directions,"b", "border-top");
+@include generate($directions,"b", "border-bottom");
