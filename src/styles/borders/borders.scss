@@ -2,6 +2,7 @@
 @use "../colors/colors.scss" as color-file;
 
 $colors: color-file.$colors;
+$hues: color-file.$hues;
 
 $directions: (
   "top": top,
@@ -38,6 +39,15 @@ $directions: (
   }
 }
 
+
+@each $name, $color in $colors{
+    @each $numerical, $perc in $hues{
+        .b-#{$name}-#{$numerical}{
+            border-color: rgba($color,$perc);
+        }
+    }
+}
+
 //Border Width
 
 @for $i from 1 through 6 {
@@ -61,8 +71,7 @@ $radius_px: (
   4: 12px,
   5: 16px,
   6: 24px,
-  7: 32px,
-  pill: 9999px,
+  7: 32px
 );
 
 $radius_perc: (

@@ -15,11 +15,17 @@
 }
 
 
-
 @include generate_for("width", "w-px", 2000, px); //Width (px)
 @include generate_for("width", "w-perc", 100, "%"); //Width (%)
-@include generate_for("width", "w-vh", 100, vh); //Width (vh)
+@include generate_for("width", "w-vw", 100, vw); //Width (vw)
 
 @include generate_for("height", "h-px", 2000, px); //Height (px)
 @include generate_for("height", "h-perc", 100, "%"); //Height (%)
 @include generate_for("height", "h-vh", 100, vh); //Height (vh)
+
+.w-auto{
+    width: auto;
+}
+.h-auto{
+    height: auto;
+}

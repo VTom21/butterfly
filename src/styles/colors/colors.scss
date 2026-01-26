@@ -11,7 +11,9 @@ $colors: (
     "secondary": #6C757D,
     "pink" : #FF2D55,
     "purple": #AF52DE,
-    "brown": rgb(167, 54, 54)
+    "brown": rgb(167, 54, 54),
+    "white": #F8F9FA, 
+    "dark": #212529  
 );
 
 //Color Hues
@@ -106,4 +108,10 @@ $hues: (
   background-repeat: repeat;  
 }
 
+.white{
+    color: #F8F9FA;
+}
 
+.dark{
+    color: #212529;
+}
