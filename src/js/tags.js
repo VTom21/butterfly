@@ -31,10 +31,10 @@ function Custom_Break() {
   });
 }
 
-function Divider(){
-  document.querySelectorAll("divider").forEach(d =>{
-    const hr = document.createElement("hr");
-    d.parentNode?.replaceChild(hr , d);
+function Divider() {
+  document.querySelectorAll("divider").forEach(d => {
+    const div = document.createElement("hr");
+    b.parentNode?.replaceChild(div, d);
   });
 }
 
@@ -50,4 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
   Break(); 
   Extra_Break();
   Custom_Break();
+  Divider();
 });
