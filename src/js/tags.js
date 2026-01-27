@@ -31,6 +31,13 @@ function Custom_Break() {
   });
 }
 
+function Divider(){
+  document.querySelectorAll("divider").forEach(d =>{
+    const hr = document.createElement("hr");
+    d.parentNode?.replaceChild(hr , d);
+  });
+}
+
 document.querySelectorAll('.rainbow').forEach(el => {
   const offset = el.getAttribute('offset');
   if (offset) {

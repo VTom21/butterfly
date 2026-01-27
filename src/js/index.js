@@ -1,1 +1,1 @@
-import "./tags.js";
+import "./tags";
