@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;700&family=Open+Sans:wght@400;700&family=Inter:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=Arimo:wght@400;700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&family=Nunito:wght@400;700&family=Nunito+Sans:wght@400;700&family=Rubik:wght@400;700&family=Ubuntu:wght@400;700&family=Mulish:wght@400;700&family=Archivo:wght@400;700&family=Quicksand:wght@400;700&family=Barlow:wght@400;700&family=Titillium+Web:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Merriweather:wght@400;700&family=Tinos:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Cardo:wght@400;700&family=Sanchez:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton:wght@400;700&family=Bebas+Neue:wght@400;700&family=Dancing+Script:wght@400;700&family=Lobster+Two:wght@400;700&family=Changa+One:wght@400;700&family=Dosis:wght@400;700&family=Cabin:wght@400;700&family=Bitter:wght@400;700&family=Pacifico:wght@400;700&family=Bungee:wght@400;700&family=Oxygen:wght@400;700&family=Tajawal:wght@400;700&family=Urbanist:wght@400;700&family=Caveat:wght@400;700&family=Abel:wght@400;700&family=Orbitron:wght@400;700&family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&family=Great+Vibes:wght@400;700&family=Fredoka:wght@400;700&family=Yellowtail:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Rowdies:wght@400;700&family=Spectral:wght@400;700&family=Geist:wght@400;700&family=Geologica:wght@400;700&family=Lilex:wght@400;700&family=Permanent+Marker:wght@400;700&family=Onest:wght@400;700&family=Acme:wght@400;700&family=Cause:wght@400;700&family=Righteous:wght@400;700&family=Geom:wght@400;700&family=Buda:wght@400;700&family=Chivo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=Prata:wght@400;700&family=Courier+Prime:wght@400;700&family=Literata:wght@400;700&family=Creepster:wght@400;700&family=Viga:wght@400;700&family=Courgette:wght@400;700&family=Syne:wght@400;700&family=Cantarell:wght@400;700&family=Oleo+Script:wght@400;700&family=Passion+One:wght@400;700&family=Press+Start+2P:wght@400;700&family=Francois+One:wght@400;700&family=Philosopher:wght@400;700&family=Kaushan+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eater:wght@400;700&family=Amaranth:wght@400;700&family=Paytone+One:wght@400;700&family=Golos+Text:wght@400;700&family=Epilogue:wght@400;700&family=Fira+Code:wght@400;700&family=Patrick+Hand:wght@400;700&family=Antonio:wght@400;700&family=Berkshire+Swash:wght@400;700&family=Forum:wght@400;700&family=Parisienne:wght@400;700&family=Italianno:wght@400;700&family=Jura:wght@400;700&family=Quantico:wght@400;700&family=Rock+Salt:wght@400;700&family=Neuton:wght@400;700&family=Tangerine:wght@400;700&family=Fugaz+One:wght@400;700&family=Cookie:wght@400;700&family=Petrona:wght@400;700&family=Gelasio:wght@400;700&family=Ultra:wght@400;700&family=Alice:wght@400;700&family=Monda:wght@400;700&family=Merienda:wght@400;700&family=Caveat+Brush:wght@400;700&family=Reenie+Beanie:wght@400;700&family=Pinyon+Script:wght@400;700&family=Vidaloka:wght@400;700&family=Share+Tech+Mono:wght@400;700&family=Cuprum:wght@400;700&family=Belanosima:wght@400;700&family=Pangolin:wght@400;700&family=Goldman:wght@400;700&family=Gabarito:wght@400;700&family=Bad+Script:wght@400;700&family=Sofia:wght@400;700&family=Michroma:wght@400;700&family=Ruda:wght@400;700&family=Tilt+Warp:wght@400;700&family=Yrsa:wght@400;700&family=Varela:wght@400;700&family=Damion:wght@400;700&family=Bevan:wght@400;700&family=Shrikhand:wght@400;700&family=Mr+Dafoe:wght@400;700&family=Marck+Script:wght@400;700&family=Cousine:wght@400;700&family=Chewy:wght@400;700&family=Besley:wght@400;700&family=Pirata+One:wght@400;700&family=Caprasimo:wght@400;700&family=Adamina:wght@400;700&family=Just+Another+Hand:wght@400;700&family=Livvic:wght@400;700&family=Kreon:wght@400;700&family=Coda:wght@400;700&family=Armata:wght@400;700&family=Italiana:wght@400;700&family=Rochester:wght@400;700&family=Andika:wght@400;700&family=Ovo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Prata:wght@400;700&display=swap&family=Mogra:wght@400;700&family=Gruppo:wght@400;700&family=Sen:wght@400;700&family=Rufina:wght@400;700&family=Grandstander:wght@400;700&family=Allerta+Stencil:wght@400;700&family=Glory:wght@400;700&family=Overpass+Mono:wght@400;700&family=Aldrich:wght@400;700&family=Candal:wght@400;700&family=Limelight:wght@400;700&family=Protest+Revolution:wght@400;700&family=Corben:wght@400;700&family=Cabin+Sketch:wght@400;700&family=Murecho:wght@400;700&family=Fondamento:wght@400;700&family=Sintony:wght@400;700&family=Caudex:wght@400;700&family=Mate:wght@400;700&family=Nobile:wght@400;700&family=Silkscreen:wght@400;700");
+@import url("https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=UnifrakturMaguntia:wght@400;700&family=Share:wght@400;700&family=Graduate:wght@400;700&family=Herr+Von+Muellerhoff:wght@400;700&family=Bellefair:wght@400;700&family=Faster+One:wght@400;700&family=Grand+Hotel:wght@400;700&family=SUSE:wght@400;700&family=Anton+SC:wght@400;700&family=Oooh+Baby:wght@400;700&family=Knewave:wght@400;700&family=Petit+Formal+Script:wght@400;700&family=Hepta+Slab:wght@400;700&family=Allerta:wght@400;700&family=Overlock:wght@400;700&family=REM:wght@400;700&family=Croissant+One:wght@400;700&family=Honk:wght@400;700&family=Arizonia:wght@400;700&family=Yesteryear:wght@400;700&family=Agbalumo:wght@400;700&family=Schoolbell:wght@400;700&family=Licorice:wght@400;700&family=Wallpoet:wght@400;700&family=Kristi:wght@400;700&family=Fjord+One:wght@400;700&family=Seaweed+Script:wght@400;700&family=Rancho:wght@400;700&display=swap");
+.heading1 {
+  font-size: 3rem;
+}
+
+.heading2 {
+  font-size: 2.5rem;
+}
+
+.heading3 {
+  font-size: 2rem;
+}
+
+.heading4 {
+  font-size: 1.5rem;
+}
+
+.heading5 {
+  font-size: 1.25rem;
+}
+
+.heading6 {
+  font-size: 1rem;
+}
+
+.heading7 {
+  font-size: 0.875rem;
+}
+
+.heading8 {
+  font-size: 0.75rem;
+}
+
+.heading9 {
+  font-size: 0.625rem;
+}
+
+.fs-flip-x {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.fs-flip-y {
+  transform: scaleY(-1);
+  display: inline-block;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-middle {
+  text-align: center;
+}
+
+.t-end {
+  text-align: right;
+}
+
+.t-start {
+  text-align: left;
+}
+
+.fl-left {
+  float: left;
+}
+
+.fl-right {
+  float: right;
+}
+
+.fl-end {
+  float: right;
+}
+
+.fl-start {
+  float: left;
+}
+
+.fl-disable {
+  float: "none";
+}
+
+.tt-upper {
+  text-transform: uppercase;
+}
+
+.tt-lower {
+  text-transform: lowercase;
+}
+
+.tt-cap {
+  text-transform: capitalize;
+}
+
+.tt-reset {
+  text-transform: none;
+}
+
+.fw-thin {
+  font-weight: 100;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-thick {
+  font-weight: 600;
+}
+
+.fw-extra-thick {
+  font-weight: 700;
+}
+
+.fw-bold {
+  font-weight: 800;
+}
+
+.fw-extra-bold {
+  font-weight: 900;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.td-strike {
+  text-decoration: line-through;
+}
+
+.td-cross {
+  text-decoration: line-through;
+}
+
+.td-slash {
+  text-decoration: line-through;
+}
+
+.td-underline {
+  text-decoration: underline;
+}
+
+.td-underline-dots {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.td-underline-dash {
+  -webkit-text-decoration: underline dashed;
+          text-decoration: underline dashed;
+}
+
+.td-underline-waves {
+  -webkit-text-decoration: underline wavy;
+          text-decoration: underline wavy;
+}
+
+.td-overline {
+  text-decoration: overline;
+}
+
+.td-overline-dots {
+  -webkit-text-decoration: overline dotted;
+          text-decoration: overline dotted;
+}
+
+.td-overline-dash {
+  -webkit-text-decoration: overline dashed;
+          text-decoration: overline dashed;
+}
+
+.td-overline-waves {
+  -webkit-text-decoration: overline wavy;
+          text-decoration: overline wavy;
+}
+
+.td-disabled {
+  text-decoration: none;
+}
+
+.fs-i {
+  font-style: italic;
+}
+
+.fs-o {
+  font-style: oblique;
+}
+
+.fs-n {
+  font-style: normal;
+}
+
+.ls-tightest {
+  letter-spacing: -0.08em;
+}
+
+.ls-tighter {
+  letter-spacing: -0.05em;
+}
+
+.ls-tight {
+  letter-spacing: -0.025em;
+}
+
+.ls-normal {
+  letter-spacing: 0;
+}
+
+.ls-wide {
+  letter-spacing: 0.025em;
+}
+
+.ls-wider {
+  letter-spacing: 0.05em;
+}
+
+.ls-widest {
+  letter-spacing: 0.1em;
+}
+
+.lh-tiny {
+  line-height: 0.25;
+}
+
+.lh-min {
+  line-height: 0.5;
+}
+
+.lh-semi-base {
+  line-height: 1;
+}
+
+.lh-medium {
+  line-height: 1.25;
+}
+
+.lh-base {
+  line-height: 1.5;
+}
+
+.lh-xl {
+  line-height: 1.75;
+}
+
+.lh-xxl {
+  line-height: 2;
+}/*# sourceMappingURL=typography.css.map */

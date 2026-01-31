@@ -34,7 +34,7 @@ function Custom_Break() {
 function Divider() {
   document.querySelectorAll("divider").forEach(d => {
     const div = document.createElement("hr");
-    b.parentNode?.replaceChild(div, d);
+    d.parentNode?.replaceChild(div, d);
   });
 }
 
