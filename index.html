@@ -1,27 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/VTom21/butterfly@master/dist/styles/bundle.min.css">
-    <script type="module" src="https://cdn.jsdelivr.net/gh/VTom21/butterfly@master/dist/js/index.min.js"></script>
-    <!--<script type="module" src="/src/js/index.js"></script>-->
-    <title>Document</title>
-  </head>
-  <body>
-    <div>
-      <ul class="show-flex space-35 flx-dir-row vertical-set-cent">
-        <li class="b p-1">Item 1</li>
-        <li class="b p-1">Item 2</li>
-        <li class="b p-1">Item 3</li>
-        <li class="b p-1">Item 4</li>
-        <li class="b p-1">Item 5</li>
-      </ul>
-      <divider></divider>
-      <button class="b-right">Click Me!</button>
-      <div class="div w-perc-100 show-flex jc-cent h-vh-50">
-        <p class="show-flex vertical-set-cent bg-info-50 p-2 b b-5 b-danger-50 br-tl-7 br-br-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, aut!</p>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/VTom21/butterfly@master/dist/styles/bundle.min.css">-->
+  <!--<script type="module" src="https://cdn.jsdelivr.net/gh/VTom21/butterfly@master/dist/js/index.min.js"></script>-->
+  <link rel="stylesheet" href="./dist/styles/bundle.min.css">
+  <link rel="stylesheet" href="test.css">
+  <title>Document</title>
+</head>
+
+<body @resize="1600,1600">
+  <div>
+    <p class="text">srsrh</p>
+    <ul class="show-flex space-35 flx-dir-row vertical-set-cent">
+      <li class="b p-1">Item 1</li>
+      <li class="b p-1">Item 2</li>
+      <li class="b p-1">Item 3</li>
+      <li class="b p-1">Item 4</li>
+      <li class="b p-1">Item 5</li>
+    </ul>
+    <button class="b-right">Click Me!</button>
+    <div class="div w-perc-100 show-flex jc-cent h-vh-50">
+      <p class="show-flex vertical-set-cent bg-info-50 p-2 b b-5 b-danger-50 br-tl-7 br-br-7">Lorem ipsum dolor, sit
+        amet consectetur adipisicing elit. Odio, aut!</p>
     </div>
-  </body>
+    <form id="myForm">
+      <label>
+        Name (at least 5 letters):
+        <input type="text" class="input" placeholder="Enter text">
+      </label>
+      <br><br>
+      <label>
+        Age (numbers only, min 2 digits):
+        <input type="text" placeholder="Enter your age">
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <button @toggle="active,active2,active3,active4" @target=".box,.box2,.box3,.box4">Toggle</button>
+
+    <div class="box" @log=".box">this is a box!</div><br>
+    <div class="box2" @log=".box2">srgser</div><br>
+    <div class="box3"></div><br>
+    <div class="box4"></div><br>
+
+  </div>
+
+  <script type="module" src="./dist/js/index.min.js"></script>
+  <script src="test.js"></script>
+</body>
+
 </html>

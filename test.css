@@ -1,0 +1,43 @@
+.text{
+    color: red;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.box4{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.active{
+    background-color: green;
+}
+
+.active2{
+    background-color: yellow;
+}
+
+.active3{
+    background-color: black;
+}
+
+.active4{
+    background-color: purple;
+}

@@ -33996,4 +33996,72 @@
 
 .o-100 {
   opacity: 100%;
+}
+
+.ovf-disabled {
+  overflow: hidden;
+}
+
+.ovf-auto {
+  overflow: auto;
+}
+
+.ovf-bar {
+  overflow: scroll;
+}
+
+.ovf-seen {
+  overflow: visible;
+}
+
+.ovf-x-disabled {
+  overflow-x: hidden;
+}
+
+.ovf-x-auto {
+  overflow-x: auto;
+}
+
+.ovf-x-bar {
+  overflow-x: scroll;
+}
+
+.ovf-x-seen {
+  overflow-x: visible;
+}
+
+.ovf-y-disabled {
+  overflow-y: hidden;
+}
+
+.ovf-y-auto {
+  overflow-y: auto;
+}
+
+.ovf-y-bar {
+  overflow-y: scroll;
+}
+
+.ovf-y-seen {
+  overflow-y: visible;
+}
+
+.obj-fit-expand {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.obj-fit-fit {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.obj-fit-fill-area {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.obj-fit-disabled {
+  -o-object-fit: none;
+     object-fit: none;
 }/*# sourceMappingURL=other.css.map */

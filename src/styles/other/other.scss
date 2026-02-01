@@ -120,6 +120,23 @@ $flex-wrap: (
 
 
 
+//overflows
+
+$overflows: (
+    "disabled": hidden,
+    "auto": auto,
+    "bar": scroll,
+    "seen": visible
+);
+
+//object-fit
+
+$object_fit: (
+    "expand": fill,
+    "fit": contain,
+    "fill-area": cover,
+    "disabled": none
+);
 
 
 @include generate($visibility, "vs", "visibility");
@@ -145,3 +162,11 @@ $flex-wrap: (
 @include generate($justify, "vertical-content", "align-content"); //Align-Content
 
 @include generate_for("opacity", "o", 100, "%"); //Opacity
+
+@include generate($overflows, "ovf", "overflow"); // overflow
+@include generate($overflows, "ovf-x", "overflow-x"); // overflow-x
+@include generate($overflows, "ovf-y", "overflow-y"); // overflow-y
+
+@include generate($object_fit, "obj-fit", "object-fit"); // object-fit
+
+

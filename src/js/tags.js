@@ -38,12 +38,13 @@ function Divider() {
   });
 }
 
-document.querySelectorAll('.rainbow').forEach(el => {
-  const offset = el.getAttribute('offset');
-  if (offset) {
-    el.style.setProperty('--offset', offset);
-  }
-});
+function highlight(){
+  document.querySelectorAll("highlight").forEach(b => {
+    const div = document.createElement("strong");
+    div.innerHTML = b.innerHTML; 
+    b.parentNode?.replaceChild(div, b);
+  });
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,4 +52,5 @@ document.addEventListener("DOMContentLoaded", () => {
   Extra_Break();
   Custom_Break();
   Divider();
+  highlight();
 });
