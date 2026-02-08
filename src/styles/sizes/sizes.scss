@@ -1,7 +1,7 @@
 @mixin generate($map, $prefix, $property) {
     @each $name, $value in $map {
         .#{$prefix}-#{$name} {
-            #{$property}: $value;
+            #{$property}: $value !important;
         }
     }
 }
@@ -9,7 +9,7 @@
 @mixin generate_for($property,$prefix, $n, $quantity){
     @for $n from 0 through $n {
         .#{$prefix}-#{$n} {
-            #{$property}: #{$n}#{$quantity};
+            #{$property}: #{$n}#{$quantity} !important;
         }
     }
 }
@@ -24,8 +24,8 @@
 @include generate_for("height", "h-vh", 100, vh); //Height (vh)
 
 .w-auto{
-    width: auto;
+    width: auto !important;
 }
 .h-auto{
-    height: auto;
+    height: auto !important;
 }

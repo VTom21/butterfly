@@ -3,7 +3,7 @@
 @mixin generate($map, $prefix, $property) {
   @each $name, $value in $map {
     .#{$prefix}-#{$name} {
-      #{$property}: $value;
+      #{$property}: $value !important;
     }
   }
 }
@@ -22,7 +22,7 @@ $sizes: (
 
 @each $name, $size in $sizes {
   .#{$name} {
-    font-size: $size;
+    font-size: $size !important;
   }
 }
 

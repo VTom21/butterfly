@@ -12,3 +12,6 @@ form.addEventListener("submit", e => {
 });
 
 
+window.nums = [1,2,3,4,5,6];
+window.bool = true;
+

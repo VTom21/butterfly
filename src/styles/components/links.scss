@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use '../colors/colors.scss' as *;
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+
+            &:hover {
+                #{$property}: color.adjust($value, $lightness: -5%);
+            }
+        }
+    }
+}
+
+.link {
+  color: rgb(95, 93, 93);
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease, opacity 0.2s ease;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+}
+
+@include generate($colors, 'link', 'color');

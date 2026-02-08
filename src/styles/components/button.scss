@@ -1,0 +1,141 @@
+@use 'sass:color';
+@use '../colors/colors.scss' as *;
+
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1rem;
+$btn-font-size: 1rem;
+$btn-border-radius: 4px;
+$btn-transition: 0.3s;
+$btn-font-weight: 500;
+
+$close-size: 1rem;
+$close-color: #000;
+$close-hover-opacity: 0.75;
+
+
+
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value !important;
+
+            &:hover {
+                #{$property}: color.adjust($value, $lightness: -5%) !important;
+            }
+        }
+    }
+}
+
+@mixin generate_outline($map, $prefix) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            background-color: transparent !important;
+            color: $value !important;
+            border: 1px solid $value ;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+            &:hover {
+                background-color: $value !important;
+                color: #fff !important;
+            }
+
+            &:focus,
+            &:active {
+                background-color: color.adjust($value, $lightness: -5%);
+                border-color: color.adjust($value, $lightness: -5%);
+                color: #fff;
+            }
+
+            &:disabled {
+                color: color.adjust($value, $lightness: 30%);
+                border-color: color.adjust($value, $lightness: 30%);
+                background-color: transparent;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+@mixin generate_close($map, $prefix) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            color: $value;
+            &:hover {
+                color: color.adjust($value, $lightness: -10%) !important;
+                background: rgba($value, 0.15) !important;
+            }
+        }
+    }
+}
+
+
+@mixin btn-base {
+    display: inline-block;
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color $btn-transition, transform $btn-transition;
+
+
+    &:active {
+        background-color: lightgray;
+    }
+
+    &:disabled {
+        background-color: lightgray;
+        cursor: not-allowed;
+    }
+}
+
+//Base Button Class
+
+.btn {
+    @include btn-base();
+}
+
+@include generate($colors, "btn", "background-color");
+
+@each $name, $color in $colors {
+    @each $numerical, $perc in $hues {
+        .btn-#{$name}-#{$numerical} {
+            background-color: rgba($color, $perc) !important;
+
+            &:hover {
+                $adjustment: (1 - $perc) * 20%;
+                background-color: color.adjust(rgba($color, $perc), $lightness: -$adjustment) !important;
+        }
+    }
+}
+}
+
+@include generate_outline($colors, "btn-outline");
+
+.btn-close {
+    width: $close-size;
+    height: $close-size;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.5;
+
+    &::before {
+        content: "×";
+        font-size: 2.5rem;
+        line-height: 1;
+        color: $close-color;
+        color: currentColor;
+    }
+
+    &:hover {
+        opacity: $close-hover-opacity;
+    }
+}
+
+@include generate_close($colors, "btn-close");

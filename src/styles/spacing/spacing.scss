@@ -1,7 +1,7 @@
 @mixin generate($map, $prefix, $property) {
     @each $name, $value in $map {
       .#{$prefix}-#{$name} {
-        #{$property}: $value;
+        #{$property}: $value !important;
       }
     }
   }
@@ -41,3 +41,35 @@ $paddings: (
 @include generate($margins,"pl","padding-left");
 
 
+
+// Vertical margin (top + bottom)
+@each $name, $value in $margins {
+  .my-#{$name} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+}
+
+// Horizontal margin (left + right)
+@each $name, $value in $margins {
+  .mx-#{$name} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+}
+
+// Vertical padding (top + bottom)
+@each $name, $value in $paddings {
+  .py-#{$name} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}
+
+// Horizontal padding (left + right)
+@each $name, $value in $paddings {
+  .px-#{$name} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+}

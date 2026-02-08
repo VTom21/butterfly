@@ -11,9 +11,22 @@
   <title>Document</title>
 </head>
 
-<body @resize="1600,1600">
-  <div>
+
+<body>
     <p class="text">srsrh</p>
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button">
+    Dropdown
+  </button>
+<ul class="dropdown-menu bg-white">
+  <li class=""><a href="#" class="dropdown-item btn btn-white-90 py-2 dark">Action 1</a></li>
+  <li class=""><a href="#" class="dropdown-item btn btn-white-90 dark">Action 2</a></li>
+  <li class="dropdown-divider"></li>
+  <li class=""><a href="#" class="dropdown-item btn btn-white-60">Action 3</a></li>
+</ul>
+
+
+</div>
     <ul class="show-flex space-35 flx-dir-row vertical-set-cent">
       <li class="b p-1">Item 1</li>
       <li class="b p-1">Item 2</li>
@@ -46,7 +59,60 @@
     <div class="box3"></div><br>
     <div class="box4"></div><br>
 
+
+<ul>
+  @cycle num in nums
+    <li>@{Math.pow(num,2)}</li>
+  @endcycle
+</ul>
+<ul>
+  @cycle num in nums
+    <li>@{num}</li>
+    @resume(num >= 4)
+  @endcycle
+</ul>
+
+<p @compute="2 * 2 * 2 * 2" @clip>The value: </p>
+
+<p @clip>edjhfsk</p>
+
+<button type="button" class="btn btn-outline-info">Click Me!</button>
+
+
+
+  <a @link="https://mail.google.com/mail/u/0/#inbox/KtbxLzFvQjPqQqqnwHZXJbjsRmDvrlZPDB">gmail lol</a>
+
+  <div class="breadcrumb">
+    <a href="#" class="breadcrumb-item active">Home</a>
+    <a href="#" class="breadcrumb-item active">Shop</a>
+    <a href="#" class="breadcrumb-item">Contacts</a>
   </div>
+
+  <div class="show-flex space-20 jc-cent">
+  <button type="buttom" class="btn-close btn-close-danger"></button>
+  <button type="buttom" class="btn-close btn-close-success"></button>
+  <button type="buttom" class="btn-close btn-close-warning"></button>
+  <button type="buttom" class="btn-close btn-close-purple"></button>
+  <button type="buttom" class="btn-close btn-close-pink"></button>
+  <button type="buttom" class="btn-close btn-close-text"></button>
+  <button type="buttom" class="btn-close btn-close-secondary"></button>
+  <button type="buttom" class="btn-close btn-close-info"></button>
+  <button type="buttom" class="btn-close btn-close-brown"></button>
+  <button type="buttom" class="btn-close"></button>
+  </div>
+
+
+<a href="#" class="link link-success">Hello there</a>
+<button type="button" class="btn btn-dark white">werwe</button><br><br>
+
+
+
+<span class="tag tag-tiny">Default<span class="btn-close"></span></span>
+<span class="tag tag-text tag-normal">Text <span class="btn-close"></span></span>
+<span class="tag tag-danger tag-big br-4">Danger <span class="btn-close"></span></span>
+<span class="tag tag-success tag-huge">Success <span class="btn-close"></span></span>
+<span class="tag tag-warning tag-max">Warning <span class="btn-close"></span></span>
+<span class="tag tag-info tag-ultra-max">Info <span class="btn-close"></span></span>
 
   <script type="module" src="./dist/js/index.min.js"></script>
   <script src="test.js"></script>

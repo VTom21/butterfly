@@ -1,0 +1,79 @@
+@use 'sass:color';
+@use 'sass:meta';
+@use '../colors/colors.scss' as *;
+
+
+@mixin generate_basic($map, $prefix, $property) {
+    @each $name, $value in $map {
+      .#{$prefix}-#{$name} {
+        #{$property}: $value !important;
+      }
+    }
+  }
+
+@function check($bg) {
+  $color: $bg;
+  @if meta.type-of($bg) == "string" {
+    $color: unquote($bg);
+  }
+
+  @if color.channel($color, "lightness", $space: hsl) < 50% {
+    @return #fff; 
+  } @else {
+    @return #000; 
+  }
+}
+
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value !important;
+            color: check($value) !important;
+
+            &:hover {
+                $hover-bg: color.adjust($value, $lightness: -5%);
+                #{$property}: $hover-bg !important;
+            }
+        }
+    }
+}
+
+
+
+
+.tag {
+    display: inline-flex;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #6c757d;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: default;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        background-color: color.adjust(#6c757d, $lightness: -5%);
+    }
+    .btn-close::before{
+        font-size: 0.9rem;
+    }
+}
+
+$sizes: (
+  "mini": 0.125rem, 
+  "normal": 0.25rem, 
+  "big": 0.5rem, 
+  "huge": 0.75rem, 
+  "max": 1rem,
+  "ultra-max": 1.25rem
+);
+
+
+@include generate($colors, 'tag', 'background-color');
+@include generate_basic($sizes, 'tag', 'padding');

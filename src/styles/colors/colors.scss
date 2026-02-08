@@ -35,65 +35,65 @@ $hues: (
 @each $name, $color in $colors{
     @each $numerical, $perc in $hues{
         .#{$name}-#{$numerical}{
-            color: rgba($color,$perc);
+            color: rgba($color,$perc) !important;
         }
     }
 }
 
 @each $name, $color in $colors{
     .bg-#{$name}{
-        background-color: $color;
+        background-color: $color !important;
     }
 }
 
 @each $name, $color in $colors{
     @each $numerical, $perc in $hues{
         .bg-#{$name}-#{$numerical}{
-            background-color: rgba($color,$perc);
+            background-color: rgba($color,$perc) !important;
         }
     }
 }
 
 
 .text{
-    color: rgb(61, 60, 60);
+    color: rgb(61, 60, 60) !important;
 }
 
 
 .danger{
-    color: rgb(230, 83, 83);
+    color: rgb(230, 83, 83 ) !important;
 }
 
 .success{
-    color: #28A745;
+    color: #28A745 !important;
 }
 
 .info{
-    color: #17A2B8;
+    color: #17A2B8 !important;
 }
 
 .warning{
-    color: #FFC107;
+    color: #FFC107 !important;
 }
 
 .primary{
-    color:#007BFF;
+    color:#007BFF !important;
 }
 
 .secondary{
-    color: #6C757D;
+    color: #6C757D !important;
 }
 
 .pink{
-    color: #FF2D55;
+    color: #FF2D55 !important;
 }
 
 .purple{
-    color: #AF52DE;
+    color: #AF52DE !important;
 }
 
 .brown{
-    color: rgb(167, 54, 54);
+    color: rgb(167, 54, 54) !important;
 }
 
 .rainbow {
@@ -109,9 +109,9 @@ $hues: (
 }
 
 .white{
-    color: #F8F9FA;
+    color: #F8F9FA !important;
 }
 
 .dark{
-    color: #212529;
+    color: #212529 !important;
 }
