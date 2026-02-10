@@ -107,12 +107,67 @@
 
 
 
+
 <span class="tag tag-tiny">Default<span class="btn-close"></span></span>
 <span class="tag tag-text tag-normal">Text <span class="btn-close"></span></span>
 <span class="tag tag-danger tag-big br-4">Danger <span class="btn-close"></span></span>
 <span class="tag tag-success tag-huge">Success <span class="btn-close"></span></span>
 <span class="tag tag-warning tag-max">Warning <span class="btn-close"></span></span>
 <span class="tag tag-info tag-ultra-max">Info <span class="btn-close"></span></span>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="15" @progress-color="rgb(230, 83, 83)">
+  <div class="progress-fill"></div>
+</div><br>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="30" @progress-color="#28A745" @progress-height="13px">
+  <div class="progress-fill"></div>
+</div><br>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="45" @progress-color="#FFC107">
+  <div class="progress-fill"></div>
+</div><br>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="60" @progress-color="#AF52DE">
+  <div class="progress-fill"></div>
+</div><br>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="75" @progress-color="cyan">
+  <div class="progress-fill"></div>
+</div><br>
+
+<div class="progress-bar" @progress-min="0" @progress-max="100" @progress-val="90" @progress-color="rgb(167, 54, 54)">
+  <div class="progress-fill"></div>
+</div>
+
+<div class="alert alert-info">
+    <span>how are you?</span>
+</div>
+<div class="alert alert-secondary">
+    <span>how are you?</span>
+    <button class="alert-close"></button>
+</div>
+<div class="alert alert-success">
+    <span>how are you?</span>
+</div>
+<div class="alert alert-danger">
+    <span>how are you?</span>
+</div>
+<div class="alert alert-warning">
+    <span>how are you?</span>
+</div>
+
+<div class="range" @range-color="green" @range-bg="pink">
+  <input type="range" min="0" max="100" value="50">
+</div>
+
+<div class="content" @fetch="test.json" @iterate="filter:item.name == 'Emma' && item.datas.age > 2">
+  <p>id: @fetch.id</p>
+  <p>Name: @fetch.name</p>
+  <p>Breed: @fetch.datas.type</p>
+  <p>Age: @fetch.datas.age</p>
+</div>
+
+</div>
 
   <script type="module" src="./dist/js/index.min.js"></script>
   <script src="test.js"></script>

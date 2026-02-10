@@ -469,5 +469,44 @@ document.querySelectorAll('[\\@clip]').forEach(el => {
   el.removeAttribute('@clip');
 });
 
+// @progress-min, 
+// @progress-max, 
+// @progress-val, 
+// @progress-color, 
+// @progress-bg, 
+// @progress-height
+
+document.querySelectorAll("[\\@progress-min]").forEach(el =>{
+  const min = Number(el.getAttribute("@progress-min"));
+  const max = Number(el.getAttribute("@progress-max"));
+  const value = Number(el.getAttribute("@progress-val"));
+  const color = el.getAttribute("@progress-color");
+  const background = el.getAttribute("@progress-bg");
+  const height = el.getAttribute("@progress-height");
+
+  if(max <= min){
+    return;
+  }
+
+  const percent = ((value - min) / (max - min)) * 100;
+  el.style.setProperty("--progress", percent + "%");
+  el.style.setProperty("--color", color);
+  el.style.setProperty("--background", background);
+  el.style.setProperty("--height", height);
 
 
+  el.removeAttribute("@progress-min");
+  el.removeAttribute("@progress-max");
+  el.removeAttribute("@progress-val");
+});
+
+
+//@range-color & @range-bg
+
+document.querySelectorAll(".range").forEach(el =>{
+  const color = el.getAttribute("@range-color");
+  const background = el.getAttribute("@range-bg");
+
+  el.style.setProperty("--range-color", color);
+  el.style.setProperty("--range-bg", background);
+});

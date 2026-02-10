@@ -3,3 +3,4 @@ import "./attributes.js";
 import "./events.js";
 import "./macros.js";
 import "./other.js";
+import "./fetch.js";

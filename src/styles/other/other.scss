@@ -138,6 +138,11 @@ $object_fit: (
     "disabled": none
 );
 
+.center-full {
+  justify-content: center;
+  align-items: center;
+}
+
 
 @include generate($visibility, "vs", "visibility");
 @include generate($display, "show", "display");

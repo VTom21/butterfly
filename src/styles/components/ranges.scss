@@ -1,0 +1,91 @@
+.range {
+  --range-color: #3b82f6; 
+  --range-bg: #e5e7eb;      
+  --range-height: 8px;
+  --range-thumb-size: 16px;
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: var(--range-thumb-size);
+  margin: 0.5rem 0;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: var(--range-height);
+    background: var(--range-bg, #e5e7eb);
+    border-radius: var(--range-height);
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+    // Filled portion
+    background: linear-gradient(
+      to right,
+      var(--range-color) 0%,
+      var(--range-color) calc((var(--value, 0) / 100) * 100%),
+      var(--range-bg) calc((var(--value, 0) / 100) * 100%),
+      var(--range-bg) 100%
+    );
+
+    transition: background 0.3s ease;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: var(--range-thumb-size);
+      height: var(--range-thumb-size);
+      background: var(--range-color, #3b82f6);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      transition: background 0.2s, transform 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: var(--range-thumb-size);
+      height: var(--range-thumb-size);
+      background: var(--range-color, #3b82f6);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      transition: background 0.2s, transform 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &::-ms-thumb {
+      width: var(--range-thumb-size);
+      height: var(--range-thumb-size);
+      background: var(--range-color, #3b82f6);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+
+    // Track for Firefox
+    &::-moz-range-track {
+      background: var(--range-bg, #e5e7eb);
+      height: var(--range-height);
+      border-radius: var(--range-height);
+    }
+
+    // Track for IE/Edge
+    &::-ms-track {
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+      height: var(--range-height);
+      border-radius: var(--range-height);
+    }
+  }
+}
