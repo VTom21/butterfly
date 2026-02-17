@@ -160,12 +160,15 @@
   <input type="range" min="0" max="100" value="50">
 </div>
 
-<div class="content" @fetch="test.json" @iterate="filter:item.name == 'Emma' && item.datas.age > 2">
+<div class="content" @fetch="test.json">
   <p>id: @fetch.id</p>
   <p>Name: @fetch.name</p>
   <p>Breed: @fetch.datas.type</p>
   <p>Age: @fetch.datas.age</p>
 </div>
+<form action="">
+  <input type="text" class="input input-text input-small input-rounded">
+</form>
 
 </div>
 

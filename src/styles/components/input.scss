@@ -1,0 +1,41 @@
+@use '../colors/colors.scss' as *;
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+        }
+    }
+}
+
+$sizes: (
+    "small": 0.875rem,
+    "medium": 1rem,
+    "large": 1.25rem
+);
+
+
+
+.input {
+    padding: 0.4rem 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  @each $name, $size in $sizes {
+    .input-#{$name} {
+      font-size: $size;
+      padding: calc(#{$size} * 0.5) calc(#{$size} * 0.75);
+    }
+  }
+
+.input-rounded{
+    border-radius: 12px !important;
+}
+  
+
+@include generate($colors, "input", "border-color");
+  

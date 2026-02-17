@@ -143,6 +143,12 @@ $object_fit: (
   align-items: center;
 }
 
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
 
 @include generate($visibility, "vs", "visibility");
 @include generate($display, "show", "display");
