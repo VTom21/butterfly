@@ -1,4 +1,4 @@
-import "./tags.js";
+import "./tags.ts";
 import "./attributes.js";
 import "./events.js";
 import "./macros.js";
