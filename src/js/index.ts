@@ -1,5 +1,5 @@
 import "./tags.ts";
-import "./attributes.js";
+import "./attributes.ts";
 import "./events.js";
 import "./macros.js";
 import "./other.ts";

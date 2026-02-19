@@ -1,13 +1,16 @@
-const all = document.querySelectorAll("body *");
+// Get all elements in the body (not used in this snippet, but kept for reference)
+const all: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>("body *");
 
-const transformMap = new WeakMap();
+// WeakMap to store transform objects for elements
+const transformMap = new WeakMap<HTMLElement, Record<string, string>>();
 
-document.querySelectorAll(".set").forEach((el) => {
+// Process elements with the "set" class
+document.querySelectorAll<HTMLElement>(".set").forEach((el) => {
   if (!transformMap.has(el)) {
     transformMap.set(el, {});
   }
 
-  const transforms = transformMap.get(el);
+  const transforms = transformMap.get(el)!; // Non-null because we just set it
 
   Array.from(el.attributes).forEach((attr) => {
     const name = attr.name;
@@ -15,7 +18,7 @@ document.querySelectorAll(".set").forEach((el) => {
 
     switch (name) {
       case "thickness":
-        el.style.borderWidth = value + "px";
+        el.style.borderWidth = `${value}px`;
         break;
 
       case "x-mult":
@@ -39,19 +42,19 @@ document.querySelectorAll(".set").forEach((el) => {
         break;
 
       case "x-turn":
-        transforms.rotate = `rotateX(${value}deg)`;
+        transforms.rotateX = `rotateX(${value}deg)`;
         break;
 
       case "y-turn":
-        transforms.rotate = `rotateY(${value}deg)`;
+        transforms.rotateY = `rotateY(${value}deg)`;
         break;
 
       case "z-turn":
-        transforms.rotate = `rotateZ(${value}deg)`;
+        transforms.rotateZ = `rotateZ(${value}deg)`;
         break;
 
-      case "pointer":
-        const cursorMap = {
+      case "pointer": {
+        const cursorMap: Record<string, string> = {
           hand: "pointer",
           grab: "grab",
           cross: "crosshair",
@@ -65,9 +68,9 @@ document.querySelectorAll(".set").forEach((el) => {
           magnify_out: "zoom-out",
           disabled: "none",
         };
-
         el.style.cursor = cursorMap[value] || value;
         break;
+      }
 
       case "blur":
         el.style.filter = `blur(${value})`;
@@ -87,11 +90,12 @@ document.querySelectorAll(".set").forEach((el) => {
     }
   });
 
-  // Rebuild the transform string
+  // Rebuild the transform string safely
   el.style.transform = Object.values(transforms).join(" ");
 });
 
-document.querySelectorAll(".rainbow").forEach((el) => {
+// Process elements with the "rainbow" class
+document.querySelectorAll<HTMLElement>(".rainbow").forEach((el) => {
   const offset = el.getAttribute("offset");
   if (offset) {
     el.style.setProperty("--offset", offset);
