@@ -15,3 +15,7 @@ form.addEventListener("submit", e => {
 window.nums = [1,2,3,4,5,6];
 window.bool = true;
 
+
+
+const box = new Butterfly(".box56");
+box.fadeIn(6000);

@@ -4,3 +4,4 @@ import "./events.js";
 import "./macros.js";
 import "./other.ts";
 import "./fetch.js";
+import "./anims.ts";

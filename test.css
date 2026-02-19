@@ -14,6 +14,13 @@
     background-color: red;
 }
 
+.box56{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    opacity: 0;
+}
+
 .box3{
     width: 200px;
     height: 200px;
@@ -41,5 +48,6 @@
 .active4{
     background-color: purple;
 }
+
 
 

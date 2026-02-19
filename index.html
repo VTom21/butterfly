@@ -171,12 +171,20 @@
 </form>
 
 
-<p class="rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam, sequi magnam eius a impedit voluptate placeat vitae accusamus temporibus.</p>
+<p class="set rainbow" pointer="hand">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam, sequi magnam eius a impedit voluptate placeat vitae accusamus temporibus.</p>
 
+
+<div class="box56"></div>
 </div>
 
   <script type="module" src="./dist/js/index.min.js"></script>
-  <script src="test.js"></script>
+  <script src="test.js" type="module"></script>
+
+  <script type="module">
+    const box = new Butterfly(".box56");
+    box.fade(6000);
+  </script>
+
 </body>
 
 </html>
