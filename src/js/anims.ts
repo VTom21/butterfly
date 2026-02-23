@@ -156,8 +156,9 @@ class Butterfly {
     });
   }
 
+
   // Fade in from top
-  fadeInTop(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
+  fadeInDown(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
     this.element.forEach(el => {
       if (!(el instanceof HTMLElement)) return;
       el.style.opacity = "0";
@@ -177,20 +178,24 @@ class Butterfly {
     });
   }
 
-  // Fade in from bottom
-  fadeInBottom(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
+  fadeInUp(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
     this.element.forEach(el => {
       if (!(el instanceof HTMLElement)) return;
+  
+      // Get current transform if exists
+      const prevTransform = getComputedStyle(el).transform === "none" ? "" : getComputedStyle(el).transform;
+  
+      // Start offscreen + hidden
       el.style.opacity = "0";
-      el.style.transform = `translateY(${distance}px)`;
-
+      el.style.transform = `${prevTransform} translateY(${distance}px)`;
+  
       scrollTrigger(
         [el],
         () => {
           setTimeout(() => {
             el.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
             el.style.opacity = "1";
-            el.style.transform = `translateY(0)`;
+            el.style.transform = `${prevTransform} translateY(0)`;
           }, delay);
         },
         { threshold }
@@ -251,5 +256,51 @@ class Butterfly {
       );
     });
   }
+
+  fadeOutUp(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
+    this.element.forEach(el => {
+      if (!(el instanceof HTMLElement)) return;
+  
+      const prevTransform = getComputedStyle(el).transform === "none" ? "" : getComputedStyle(el).transform;
+  
+      // Start in-place, fully visible
+      el.style.opacity = "1";
+      el.style.transform = `${prevTransform} translateY(0)`;
+  
+      scrollTrigger(
+        [el],
+        () => {
+          setTimeout(() => {
+            el.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
+            el.style.opacity = "0";
+            el.style.transform = `${prevTransform} translateY(-${distance}px)`;
+          }, delay);
+        },
+        { threshold }
+      );
+    });
+  }
+
+  fadeOutDown(distance = 50, duration = 1000, delay = 0, threshold = 0.1) {
+    this.element.forEach(el => {
+      if (!(el instanceof HTMLElement)) return;
+      el.style.opacity = "1";
+      el.style.transform = `translateY(-${distance}px)`;
+
+      scrollTrigger(
+        [el],
+        () => {
+          setTimeout(() => {
+            el.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
+            el.style.opacity = "0";
+            el.style.transform = `translateY(0)`;
+          }, delay);
+        },
+        { threshold }
+      );
+    });
+  }
 }
+
+
 (window as any).Butterfly = Butterfly;
