@@ -1,6 +1,6 @@
 {
   "name": "butterfly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Butterfly is a modern front-end framework that combines CSS utilities, prebuilt components, and flexible JS features to make building web apps faster and easier.",
   "keywords": [
     "framework",
@@ -25,7 +25,9 @@
   "type": "module",
   "main": "dist/js/index.min.js",
   "style": "dist/styles/bundle.min.css",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "hiii"
   },
