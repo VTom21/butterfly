@@ -174,7 +174,11 @@
 <p class="set rainbow" pointer="hand">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam, sequi magnam eius a impedit voluptate placeat vitae accusamus temporibus.</p>
 
 
-<div class="box56"></div>
+<div class="box56"></div><br>
+<div class="box57"></div><br>
+<div class="box58"></div><br>
+<div class="box59"></div><br>
+<div class="box60"></div><br>
 </div>
 
   <script type="module" src="./dist/js/index.min.js"></script>
@@ -182,7 +186,19 @@
 
   <script type="module">
     const box = new Butterfly(".box56");
-    box.fade(6000);
+    box.left(200, 2000, 0.4);
+
+    const box2 = new Butterfly(".box57");
+    box2.left(200, 2000, 0.4);
+
+    const box3 = new Butterfly(".box58");
+    box3.left(200, 2000, 0.4);
+
+    const box4 = new Butterfly(".box59");
+    box4.right(200, 2000, 0.4);
+
+    const box5 = new Butterfly(".box60");
+    box5.fadeOutRight(500,2000, 0.4);
   </script>
 
 </body>
