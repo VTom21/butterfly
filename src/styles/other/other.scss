@@ -47,6 +47,12 @@ $positions: (
     "stat": static
 );
 
+$user-select: (
+  "disabled": "none",
+    "auto": "auto",
+    "all": "all"
+);
+
 //Justify-Content
 
 $justify: (
@@ -179,5 +185,6 @@ $object_fit: (
 @include generate($overflows, "ovf-y", "overflow-y"); // overflow-y
 
 @include generate($object_fit, "obj-fit", "object-fit"); // object-fit
+@include generate($user-select, "usr-pick", "user-select"); // user-select
 
 

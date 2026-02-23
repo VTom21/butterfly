@@ -1,0 +1,156 @@
+@use '../colors/colors.scss' as *;
+@use 'sass:color';
+
+
+@mixin generate($map, $prefix, $property) {
+
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value;
+        }
+    }
+}
+
+@mixin generate-list($map, $prefix) {
+  @each $name, $value in $map {
+    .list-group-item.#{$prefix}-#{$name} {
+      $light-color: rgba($value, 0.5);
+      $dark-color: color.adjust($value, $lightness: 30%);
+      
+      background-color: $light-color;
+      border-bottom: 1px solid $dark-color; // default bottom border
+
+      &:first-child {
+        border-top-left-radius: $list-radius;
+        border-top-right-radius: $list-radius;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $list-radius;
+        border-bottom-right-radius: $list-radius;
+        border-bottom: 1px solid $dark-color; // proper colored bottom border
+      }
+    }
+  }
+}
+
+// ===============================
+// Variables (framework tokens)
+// ===============================
+$list-bg: #fff !default;
+$list-border: #e5e7eb !default;
+$list-hover: #f3f4f6 !default;
+$list-active: #2563eb !default;
+$list-bright-active: #4479ec !default;
+$list-active-text: #fff !default;
+$list-radius: 0.5rem !default;
+$list-padding-small: 0.5rem 0.75rem !default;
+$list-padding-mid: 0.75rem 1rem !default;
+$list-padding-large: 1rem 1.25rem !default;
+$list-padding-gigantic: 1.5rem 1.75rem !default;
+$list-transition: 0.2s ease !default;
+
+// ===============================
+// List Group Container
+// ===============================
+.list-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: $list-bg;
+  border: 1px solid $list-border;
+  border-radius: $list-radius;
+  overflow: hidden;
+
+  &-flush {
+    border: none;
+    border-radius: 0;
+  }
+
+  &-inline {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// ===============================
+// List Group Item
+// ===============================
+.list-group-item {
+  display: flex;            // enable flexible layout
+  align-items: center;      // vertical alignment
+  justify-content: space-between; // push badge to the far right
+  position: relative;  // make item a positioning context
+  padding: $list-padding-mid;
+  border-bottom: 1px solid $list-border;
+  cursor: pointer;
+  transition: background $list-transition;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    filter: brightness(95%);
+  }
+
+  &.active {
+    background: $list-active !important;
+    color: $list-active-text !important;
+    border-bottom: 1px solid rgba($list-bright-active, 0.8) !important;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// ===============================
+// Size Modifiers
+// ===============================
+.list-small {
+  .list-group-item {
+    padding: $list-padding-small;
+  }
+}
+
+.list-mid {
+  .list-group-item {
+    padding: $list-padding-mid;
+  }
+}
+
+.list-large {
+  .list-group-item {
+    padding: $list-padding-large;
+  }
+}
+
+.list-gigantic {
+  .list-group-item {
+    padding: $list-padding-gigantic;
+  }
+}
+
+.list-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-badge {
+  position: absolute;
+  right: 0.75rem; // distance from the right edge
+  top: 50%;        // vertically center
+  transform: translateY(-50%);
+  background: $list-active;
+  color: $list-active-text;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+
+@include generate-list($colors, "list");
+@include generate($colors, "list-badge", "background-color");
