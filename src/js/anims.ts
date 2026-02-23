@@ -300,6 +300,34 @@ class Butterfly {
       );
     });
   }
+
+  pulse(scale = 1.1, duration = 1000, delay = 0, threshold = 0.1, loop = false) {
+    (this.element as NodeListOf<HTMLElement>).forEach(el => {
+      if (!(el instanceof HTMLElement)) return;
+  
+      // Optional: trigger only when visible
+      scrollTrigger(
+        [el],
+        () => {
+          setTimeout(() => {
+            el.animate(
+              [
+                { transform: "scale(1)", opacity: 1 },
+                { transform: `scale(${scale})`, opacity: 0.8 },
+                { transform: "scale(1)", opacity: 1 }
+              ],
+              {
+                duration: duration,
+                iterations: loop ?  Infinity : 1,
+                easing: "ease-in-out"
+              }
+            );
+          }, delay);
+        },
+        { threshold }
+      );
+    });
+  }
 }
 
 
