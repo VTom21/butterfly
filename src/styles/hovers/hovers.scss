@@ -1,0 +1,35 @@
+@use '../colors/colors.scss' as *;
+@use '../typography/typography.scss' as *;
+@use '../other/other.scss' as *;
+
+@mixin generate-hover($map, $prefix, $property) {
+  @each $name, $value in $map {
+    .hover\:#{$prefix}-#{$name}:hover {
+      #{$property}: $value !important;
+    }
+  }
+}
+
+$opacity: (
+  0: 0,
+  10: 0.1,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  100: 1
+);
+
+@include generate-hover($colors, "bg", "background-color");
+@include generate-hover($colors, "col", "color");
+@include generate-hover($opacity, "o", "opacity");
+@include generate-hover($weights,"fw","font-weight");
+@include generate-hover($transformations,"tt","text-transform");
+@include generate-hover($decorations,"td","text-decoration");
+@include generate-hover($styles,"fs","font-style");
+@include generate-hover($colors,"border","border-color");
+@include generate-hover($visibility, "vs", "visibility");
