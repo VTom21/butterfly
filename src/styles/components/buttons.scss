@@ -63,7 +63,6 @@ $close-hover-opacity: 0.75;
             color: $value;
             &:hover {
                 color: color.adjust($value, $lightness: -10%) !important;
-                background: rgba($value, 0.15) !important;
             }
         }
     }
