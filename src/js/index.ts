@@ -5,3 +5,5 @@ import "./macros.js";
 import "./other.ts";
 import "./fetch.js";
 import "./anims.ts";
+import "./accordions.ts";
+import "./tabs.ts";

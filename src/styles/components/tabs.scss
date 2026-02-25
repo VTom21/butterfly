@@ -1,0 +1,64 @@
+// Tabs container
+.tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+  }
+  
+  // Tab headers
+  .tabs-header {
+    display: flex;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  
+  // Individual tab button
+  .tab {
+    display: flex;               // allows icon + text
+    align-items: center;
+    gap: 0.5rem;                 // space between icon and text
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  
+    &:hover {
+      color: #3b82f6;
+    }
+  
+    &.active {
+      color: #3b82f6;
+      border-bottom-color: #3b82f6;
+    }
+  
+    // Icon inside tab
+    .tab-icon {
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      font-size: 1rem;      // for icon font
+      align-items: center;
+      justify-content: center;
+    }
+  
+    // Text inside tab
+    .tab-text {
+      display: inline-block;
+    }
+  }
+  
+  // Tab content container
+  .tabs-content {
+    padding: 1rem 0;
+  }
+  
+  // Individual tab panel
+  .tab-panel {
+    display: none;
+  
+    &.active {
+      display: block;
+    }
+  }

@@ -1,0 +1,47 @@
+@use "../colors/colors.scss" as *;
+
+
+@mixin generate($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: $value !important;
+            border: 1px solid $value !important;
+        }
+    }
+}
+
+@mixin generate-outline($map, $prefix, $property) {
+    @each $name, $value in $map {
+        .#{$prefix}-#{$name} {
+            #{$property}: white !important;
+            border: 1px solid $value !important;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .pagination button {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+@include generate($colors, "pagination", "background-color");
+@include generate-outline($colors, "pagination-outline", "background-color");

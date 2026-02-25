@@ -1,0 +1,118 @@
+// Timeline container
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #d1d5db; // vertical central line
+      transform: translateX(-50%);
+    }
+  }
+  
+  // Timeline item
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  
+    // alternate sides
+    &:nth-child(odd) {
+      left: 0;
+      text-align: right;
+  
+      .timeline-content {
+        margin-right: 2rem;
+      }
+  
+      .timeline-marker {
+        right: -10px;
+        left: auto;
+      }
+    }
+  
+    &:nth-child(even) {
+      left: 50%;
+      text-align: left;
+  
+      .timeline-content {
+        margin-left: 2rem;
+      }
+  
+      .timeline-marker {
+        left: -10px;
+      }
+    }
+  }
+  
+  // Timeline marker (circle)
+  .timeline-marker {
+    position: absolute;
+    top: 1rem;
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 2;
+  }
+  
+  // Timeline content
+  .timeline-content {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: inline-block;
+  }
+  
+  // Timeline date
+  .timeline-date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+  }
+  
+  // Timeline title
+  .timeline-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  // Timeline description
+  .timeline-description {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  // Responsive for mobile
+  @media (max-width: 640px) {
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: left !important;
+      padding: 0.5rem 1rem;
+  
+      .timeline-content {
+        margin: 0 0 0 2rem !important;
+      }
+  
+      .timeline-marker {
+        left: -10px !important;
+        right: auto !important;
+      }
+    }
+  
+    .timeline::before {
+      left: 1rem;
+    }
+  }
