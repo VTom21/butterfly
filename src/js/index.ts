@@ -7,3 +7,4 @@ import "./fetch.js";
 import "./anims.ts";
 import "./accordions.ts";
 import "./tabs.ts";
+import "./dark.ts";

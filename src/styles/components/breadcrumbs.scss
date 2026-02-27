@@ -15,12 +15,13 @@ $breadcrumb-active-color: #2d8ceb;
   background-color: $breadcrumb-bg;
   border-radius: $breadcrumb-radius;
   font-size: $breadcrumb-font-size;
+  list-style: none;
 }
 
 
 .breadcrumb-item {
   color: $breadcrumb-color;
-  text-decoration: none;
+  text-decoration: none !important;
 
 
   &.active {
@@ -28,6 +29,9 @@ $breadcrumb-active-color: #2d8ceb;
     pointer-events: none;
     font-weight: 500;
     background: none !important;
+  }
+  & a{
+    text-decoration: none !important;
   }
   
   & + .breadcrumb-item::before {
