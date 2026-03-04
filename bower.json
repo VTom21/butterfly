@@ -1,7 +1,7 @@
 {
   "name": "butterfly",
   "version": "0.0.1@latest",
-  "main": "(dist/js/index.min.js, dist/styles/bundle.min.css)",
+  "main": "dist/js/index.min.js, dist/styles/bundle.min.css",
   "ignore": [
     "**/.*",
     "node_modules",
