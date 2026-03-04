@@ -1,17 +1,32 @@
 {
-    "name": "butterfly",
-    "version": "0.0.1",
-    "main": [
-      "dist/js/index.min.js",
-      "dist/styles/bundle.min.css"
-    ],
-    "ignore": [
-      "**/.*",
-      "node_modules",
-      "bower_components",
-      "tests"
-    ],
-    "dependencies": {
-      "jquery": "^3.7.0"
-    }
-  }
+  "name": "butterfly",
+  "version": "0.0.1",
+  "main": "(dist/js/index.min.js, dist/styles/bundle.min.css)",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "^3.7.0"
+  },
+  "homepage": "https://github.com/VTom21/butterfly",
+  "description": "front-end framework chiefly using html, css and ts",
+  "keywords": [
+    "butterfly",
+    "front-end",
+    "framework",
+    "tools",
+    "package",
+    "utilities",
+    "utils",
+    "modern",
+    "web"
+  ],
+  "authors": [
+    "Tamás Visegrádi"
+  ],
+  "license": "MIT"
+}
