@@ -1,0 +1,63 @@
+@use "../colors/colors.scss" as *;
+
+$checkbox-size: 20px;
+$checkbox-border-width: 2px;
+$checkbox-radius: 4px;
+$checkbox-transition: 0.2s;
+
+@mixin generate-checkbox($map, $prefix: "checkbox") {
+  @each $name, $color in $map {
+    .#{$prefix}-#{$name} {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1rem;
+      user-select: none;
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      .checkmark {
+        position: relative;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        border: $checkbox-border-width solid $color;
+        border-radius: $checkbox-radius;
+        background-color: #fff;
+        transition: background-color $checkbox-transition, border-color $checkbox-transition;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 7px;
+          top: 1px;
+          width: 6px;
+          height: 12px;
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      input[type="checkbox"]:checked + .checkmark {
+        background-color: $color;
+        border-color: $color;
+
+        &::after {
+          display: block;
+        }
+      }
+
+      input[type="checkbox"]:disabled + .checkmark {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@include generate-checkbox($colors);
