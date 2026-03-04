@@ -1,0 +1,17 @@
+{
+    "name": "butterfly",
+    "version": "0.0.1",
+    "main": [
+      "./dist/js/index.min.js",
+      "./dist/styles/bundle.min.css"
+    ],
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "tests"
+    ],
+    "dependencies": {
+      "jquery": "^3.7.0"
+    }
+  }
