@@ -1,0 +1,127 @@
+@use "../colors/colors.scss" as *;
+@use "sass:map";
+
+
+
+/* ===============================
+   BASE UPLOAD WRAPPER
+   =============================== */
+
+
+:root{
+    --upload-accent: #2563eb;
+    --upload-border: #d1d5db;
+    --upload-bg: #ffffff;
+    --upload-hover-bg: #f9fafb;
+    --upload-text: #374151;
+    --upload-muted: #9ca3af;
+    --upload-transition: 0.2s ease;
+    --upload-radius: 0.75rem;
+}
+
+.u-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+
+
+/* ===============================
+   COLOR VARIANTS (FROM $colors)
+   =============================== */
+
+   @each $name, $color in $colors {
+    .u-upload-#{$name} {
+      --upload-accent: #{$color};
+      --upload-border: #{$color};           // ← this is what actually recolors the border
+      --upload-hover-bg: #{rgba($color, 0.08)};
+    }
+  }
+
+
+
+/* ===============================
+   DROPZONE
+   =============================== */
+
+.u-upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+  text-align: center;
+
+  border: 2px dashed var(--upload-border);
+  border-radius: var(--upload-radius);
+
+  background: var(--upload-bg);
+  cursor: pointer;
+
+  transition:
+    background var(--upload-transition),
+    border-color var(--upload-transition),
+    transform var(--upload-transition);
+}
+
+
+
+/* hover uses variable swap (MOST RELIABLE WAY) */
+
+.u-upload-dropzone:hover {
+  --upload-border: var(--upload-accent);
+  background: var(--upload-hover-bg);
+}
+
+
+
+/* click feedback */
+
+.u-upload-dropzone:active {
+  transform: scale(0.98);
+}
+
+
+
+/* drag state */
+
+.u-upload-dropzone.dragover {
+  --upload-border: var(--upload-accent);
+  background: var(--upload-hover-bg);
+}
+
+
+
+/* ===============================
+   TEXT STYLES
+   =============================== */
+
+.u-upload-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--upload-text);
+}
+
+.u-upload-subtitle {
+  font-size: 0.8rem;
+  color: var(--upload-muted);
+}
+
+
+
+/* ===============================
+   MODIFIERS
+   =============================== */
+
+.u-upload-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.u-upload-full {
+  width: 100%;
+}

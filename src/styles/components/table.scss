@@ -1,0 +1,104 @@
+@use "../colors/colors.scss" as *;
+@use "sass:map";
+
+.table {
+
+
+  --table-bg: #ffffff;
+  --table-text: #374151;
+
+  --table-border: #e5e7eb;
+  --table-head-bg: #f9fafb;
+  --table-row-hover: #f3f4f6;
+
+  --table-accent: #2563eb;
+
+  --table-padding: 0.75rem 1rem;
+  --table-font-size: 0.875rem;
+
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--table-bg);
+  color: var(--table-text);
+  font-size: var(--table-font-size);
+
+
+
+  thead {
+    background: var(--table-head-bg);
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    padding: var(--table-padding);
+    border-bottom: 1px solid var(--table-border);
+  }
+
+
+
+  td {
+    padding: var(--table-padding);
+    border-bottom: 1px solid var(--table-border);
+    vertical-align: middle;
+  }
+
+
+
+  tbody tr:hover {
+    background: var(--table-row-hover);
+    transition: 0.2s ease;
+  }
+
+
+
+  tbody tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+
+  .is-accent {
+    border-left: 3px solid var(--table-accent);
+  }
+
+
+
+  .muted {
+    color: #9ca3af;
+  }
+
+  .strong {
+    font-weight: 600;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    font-size: 11px;
+    border-radius: 999px;
+    background: var(--table-accent);
+    color: white;
+  }
+
+
+
+  tfoot {
+    background: #fafafa;
+  }
+
+  tfoot td {
+    padding: var(--table-padding);
+    border-top: 1px solid var(--table-border);
+  }
+}

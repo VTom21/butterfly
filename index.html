@@ -5,161 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="test.css">
-  <link rel="stylesheet" href="./src/styles/bundle.css">
+  <link rel="stylesheet" href="./dist/styles/bundle.min.css">
   <title>Document</title>
 </head>
 
 <body>
-  <button class="btn btn-outline-white hover:col-dark hover:bg-dark">Hover me</button>
-  <button class="btn btn-outline-primary">Hover me</button>
-  <button class="btn btn-primary">Primary</button>
-  <button class="btn btn-outline-secondary">Primary</button>
-  <button class="btn btn-outline-purple">Primary</button>
-  <button class="btn btn-outline-brown">Primary</button>
-  <button class="btn btn-outline-success">Primary</button><br><br>
 
-  <a href="#" class="link link-danger">Link</a>
-  <a href="#" class="link link-primary">Link</a>
-  <a href="#" class="link link-success">Link</a>
-  <a href="#" class="link link-warning">Link</a>
-<br><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="center">Status</th>
+      <th class="right">Role</th>
+    </tr>
+  </thead>
 
-  <div class="alert alert-primary">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, quasi.</p>
-  </div>
+  <tbody>
 
-  <div class="alert alert-danger">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, quasi.</p>
-  </div>
+    <tr>
+      <td class="strong">John Doe</td>
+      <td class="center">Active</td>
+      <td class="right">Admin</td>
+    </tr>
 
-  
-  <div class="alert alert-warning">
-    <p class="alert-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, quasi.</p>
-  </div>
+    <tr class="">
+      <td class="strong">John Doe</td>
+      <td class="center">Active</td>
+      <td class="right">Admin</td>
+    </tr>
 
-    <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href=""class="secondary">Home</a></li>
-      <li class="breadcrumb-item"><a href=""class="secondary">Data</a></li>
-      <li class="breadcrumb-item"><a href=""class="secondary">Settings</a></li>
-    </ul>
+  </tbody>
 
-    <h1 class="bg-secondary">Text</h1>
+  <tfoot>
+    <tr>
+      <td class="strong">John Doe</td>
+      <td class="center">Active</td>
+      <td class="right">Admin</td>
+    </tr>
+  </tfoot>
 
-    <label class="checkbox-success">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-    
-    <label class="checkbox-danger">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-
-    <label class="checkbox-warning">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-
-    <label class="checkbox-secondary">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-
-    <label class="checkbox-primary">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-
-    <label class="checkbox-purple">
-      <input type="checkbox" checked />
-      <span class="checkmark"></span>
-      Accept terms
-    </label>
-
-    <ul class="list-group list-mid">
-    <li class="list-group-item list-primary">
-      <span class="list-icon">
-        <span class="icon"></span>
-        Item 1
-      </span>
-      <span class="list-badge">3</span>
-    </li>
-    <li class="list-group-item list-secondary active">
-      <span class="list-icon">
-        <span class="icon"></span>
-        Item 2
-      </span>
-      <span class="list-badge">5</span>
-    </li>
-    <li class="list-group-item list-success disabled">
-      <span class="list-icon">
-        <span class="icon"></span>
-        Item 3
-      </span>
-      <span class="list-badge">1</span> 
-    </li>
-    <li class="list-group-item list-danger">
-      <span class="list-icon">
-        <span class="icon"></span>
-        Item 4
-      </span>
-      <span class="list-badge">7</span>
-    </li>
-  </ul>
-
-  <div class="avatar-wrapper">
-  <!-- Tiny avatars -->
-  <div class="avatar-container avatar-tiny">
-    <div class="avatar">AB</div>
-    <div class="avatar-status avatar-online"></div>
-  </div>
-  <div class="avatar-container avatar-tiny">
-    <div class="avatar"><img src="avatar1.jpg" alt="User 1"></div>
-    <div class="avatar-status avatar-offline"></div>
-  </div>
-  <div class="avatar-container avatar-tiny">
-    <div class="avatar">CD</div>
-    <div class="avatar-status avatar-busy"></div>
-  </div>
-
-  <!-- Min avatars -->
-  <div class="avatar-container avatar-min">
-    <div class="avatar">EF</div>
-    <div class="avatar-status avatar-online"></div>
-  </div>
-  <div class="avatar-container avatar-min">
-    <div class="avatar"><img src="avatar2.jpg" alt="User 2"></div>
-    <div class="avatar-status avatar-offline"></div>
-  </div>
-
-  <!-- Semi-base avatars -->
-  <div class="avatar-container avatar-semi-base">
-    <div class="avatar">GH</div>
-    <div class="avatar-status avatar-busy"></div>
-  </div>
-
-  <!-- Medium avatars -->
-  <div class="avatar-container avatar-medium">
-    <div class="avatar">IJ</div>
-    <div class="avatar-status avatar-online"></div>
-  </div>
-
-  <!-- XL avatars -->
-  <div class="avatar-container avatar-xl">
-    <div class="avatar"><img src="https://static.vecteezy.com/system/resources/thumbnails/022/153/915/small/businessman-avatar-icon-png.png" alt="User 3"></div>
-    <div class="avatar-status avatar-busy"></div>
-  </div>
+</table>
 
 
-
-<div class="range">
-  <input type="range" min="0" max="100" value="40">
 </div>
+
   
   <script src="./dist/js/index.min.js"></script>
 
