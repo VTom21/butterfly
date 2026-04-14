@@ -1,0 +1,70 @@
+//background-repeat
+
+
+$background_repeat:(
+    "init": initial,
+    "no-rep": no-repeat,
+    "rep-x": repeat-x,
+    "rep-y": repeat-y,
+    "round": round,
+    "space": space,
+    "rep": repeat
+);
+
+@each $name, $value in $background_repeat{
+    .bg-rep-#{$name}{
+        background-repeat: #{$value};
+    }
+}
+
+//background-origin
+
+$background_origin:(
+    "init": initial,
+    "border": border-box,
+    "padding": padding-box,
+    "content": content-box
+);
+
+@each $name, $value in $background_origin{
+    .bg-o-#{$name}{
+        background-origin: #{$value};
+    }
+}
+
+//background-clip
+
+$background_clip:(
+    "init": initial,
+    "border": border-box,
+    "padding": padding-box,
+    "content": content-box
+);
+
+@each $name, $value in $background_repeat{
+    .bg-cl-#{$name}{
+        background-clip: #{$value};
+    }
+}
+
+//background-position
+
+$background_position:(
+    "init": initial,
+    "t-left": top left,
+    "t": top center,
+    "t-right": top right,
+    "c-left": center left,
+    "c-center": center center,
+    "c-right": center right,
+    "b-left": bottom left,
+    "b": bottom center,
+    "b-right": bottom right
+);
+
+
+@each $name, $value in $background_position{
+    .bg-pos-#{$name}{
+        background-position: #{$value};
+    }
+}

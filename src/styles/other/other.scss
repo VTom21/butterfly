@@ -1,3 +1,5 @@
+@use "../colors/colors.scss" as *;
+
 @mixin generate($map, $prefix, $property) {
     @each $name, $value in $map {
         .#{$prefix}-#{$name} {
@@ -143,6 +145,15 @@ $object_fit: (
     "fill-area": cover,
     "disabled": none
 );
+
+@each $name, $color in $colors {
+
+    .stroke-#{$name},
+    .stroke-#{$name} path {
+      stroke: #{$color};
+    }
+  
+  }
 
 .center-full {
   justify-content: center;

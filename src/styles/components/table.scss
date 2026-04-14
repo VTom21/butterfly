@@ -1,5 +1,6 @@
 @use "../colors/colors.scss" as *;
 @use "sass:map";
+@use "sass:color";
 
 .table {
 
@@ -25,7 +26,7 @@
 
 
   thead {
-    background: var(--table-head-bg);
+    background: var(--table-bg);
   }
 
   th {
@@ -45,15 +46,11 @@
 
 
 
-  tbody tr:hover {
-    background: var(--table-row-hover);
-    transition: 0.2s ease;
-  }
 
 
 
   tbody tr:nth-child(even) {
-    background: #f9fafb;
+    background: var(--table-bg);
   }
 
 
@@ -62,14 +59,6 @@
   }
 
 
-
-  .muted {
-    color: #9ca3af;
-  }
-
-  .strong {
-    font-weight: 600;
-  }
 
   .center {
     text-align: center;
@@ -93,12 +82,22 @@
 
 
 
-  tfoot {
-    background: #fafafa;
-  }
-
   tfoot td {
     padding: var(--table-padding);
     border-top: 1px solid var(--table-border);
+  }
+}
+
+@each $name, $color in $colors{
+  .table-#{$name} {
+    --table-bg: #{$color};
+
+    --table-border: #{color.scale($color, $lightness: -20%)};
+
+    --table-text: #ffffff;
+
+    @if $name == "white" {
+      --table-text: #374151;
+    }
   }
 }
