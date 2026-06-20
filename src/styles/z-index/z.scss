@@ -1,5 +1,5 @@
 @mixin generate_for($property,$prefix, $n){
-    @for $n from 0 through $n {
+    @for $n from 1 through $n {
         .#{$prefix}-#{$n} {
             #{$property}: #{$n} !important;
         }

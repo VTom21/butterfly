@@ -116,6 +116,6 @@
     "postcss-cli": "^11.0.1",
     "rollup": "^2.79.2",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.97.3"
+    "sass": "^1.101.0"
   }
 }

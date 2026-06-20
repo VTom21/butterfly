@@ -55,45 +55,10 @@ $hues: (
 }
 
 
-.text{
-    color: rgb(61, 60, 60) !important;
-}
-
-
-.danger{
-    color: rgb(230, 83, 83 ) !important;
-}
-
-.success{
-    color: #28A745 !important;
-}
-
-.info{
-    color: #17A2B8 !important;
-}
-
-.warning{
-    color: #FFC107 !important;
-}
-
-.primary{
-    color:#007BFF !important;
-}
-
-.secondary{
-    color: #6C757D !important;
-}
-
-.pink{
-    color: #FF2D55 !important;
-}
-
-.purple{
-    color: #AF52DE !important;
-}
-
-.brown{
-    color: rgb(167, 54, 54) !important;
+@each $name, $color in $colors {
+    .#{$name} {
+        color: #{$color};
+    }
 }
 
 .rainbow {
@@ -108,10 +73,3 @@ $hues: (
   background-repeat: repeat;  
 }
 
-.white{
-    color: #F8F9FA !important;
-}
-
-.dark{
-    color: #212529 !important;
-}

@@ -25,5 +25,6 @@
 @use "./components/avatars.scss";
 @use "./components/upload.scss";
 @use "./components/table.scss";
-@use "./backgrounds/backgrounds.scss"
-
+@use "./backgrounds/backgrounds.scss";
+@use "./components/card.scss";
+@use "./breakpoints/breakpoints.scss";

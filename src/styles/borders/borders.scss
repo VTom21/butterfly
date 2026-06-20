@@ -39,6 +39,14 @@ $directions: (
   }
 }
 
+@each $name, $color in $colors {
+  @each $dir_name, $direction in $directions {
+    .b-#{$dir_name}-#{$name} {
+      border-#{$dir_name}-color: #{$color} !important;
+    }
+  }
+}
+
 
 @each $name, $color in $colors{
     @each $numerical, $perc in $hues{

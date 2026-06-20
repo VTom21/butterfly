@@ -1,3 +1,4 @@
-h1{
-    font-family: var(--font-cabin-sketch);
+.div1{
+    border: 1px solid;
+    border-top-color: aqua;
 }

@@ -1,0 +1,123 @@
+@use "sass:map";
+@use "../other/other.scss" as other;
+@use "../spacing/spacing.scss" as spacing;
+
+$displays: other.$display;
+$visibility: other.$visibility;
+$positions: other.$positions;
+$justify: other.$justify;
+$justify-items: other.$justify-items;
+$justify-self: other.$justify-self;
+$flex-direction: other.$flex-direction;
+$flex-wrap: other.$flex-wrap;
+
+$margins: spacing.$margins;
+$paddings: spacing.$paddings;
+
+$grid-cols: other.$grid-cols;
+$grid-span: other.$grid-span;
+
+
+$spacing: (
+  0: 0px,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px
+);
+
+
+$breakpoints: (
+  xs: 22.5rem,   
+  sm: 36rem,     
+  md: 48rem,     
+  lg: 62rem,     
+  xl: 75rem,     
+  xxl: 87.5rem,  
+  wide: 100rem,  
+  u-wide: 120rem 
+);
+
+
+
+
+
+@mixin generate($map, $prefix, $property) {
+    @each $bp, $size in $breakpoints {
+        @each $name, $value in $map {
+
+            .#{$bp}\:#{$prefix}-#{$name} {
+                @include bp($bp) {
+                    #{$property}: $value !important;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin generate_multi($map, $prefix, $properties...) {
+  @each $bp, $size in $breakpoints {
+    @each $name, $value in $map {
+
+      .#{$bp}\:#{$prefix}-#{$name} {
+        @include bp($bp) {
+
+          @each $prop in $properties {
+            #{$prop}: $value !important;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+@mixin bp($name) {
+    @media (min-width: map.get($breakpoints, $name)) {
+        @content;
+    }
+}
+
+
+@include generate($displays, "show", "display");
+@include generate($visibility, "vs", "visibility");
+@include generate($positions, "pos", "position");
+
+@include generate($justify, "jc", "justify-content");
+@include generate($justify-items, "ji", "justify-items");
+@include generate($justify-self, "js", "justify-self");
+
+@include generate($flex-direction, "flx-dir", "flex-direction");
+@include generate($flex-wrap, "flx-wrap", "flex-wrap");
+
+@include generate($justify-items, "align", "align-items");
+@include generate($justify-self, "align-self", "align-self");
+
+@include generate($spacing, "space", "gap");
+
+@include generate($margins,"m","margin");
+@include generate($margins,"mt","margin-top");
+@include generate($margins,"mb","margin-bottom");
+@include generate($margins,"mr","margin-right");
+@include generate($margins,"ml","margin-left");
+
+@include generate($margins,"p","padding");
+@include generate($margins,"pt","padding-top");
+@include generate($margins,"pb","padding-bottom");
+@include generate($margins,"pr","padding-right");
+@include generate($margins,"pl","padding-left");
+
+@include generate_multi($margins, "my", "margin-top", "margin-bottom");
+@include generate_multi($margins, "mx", "margin-left", "margin-right");
+@include generate_multi($paddings, "py", "padding-top", "padding-bottom");
+@include generate_multi($paddings, "px", "padding-left", "padding-right");
+
+
+@include generate($grid-cols, "gr-cols", "grid-template-columns");
+@include generate($grid-cols, "gr-rows", "grid-template-rows");
+@include generate($grid-span, "col-span", "grid-column");
+@include generate($grid-span, "row-span", "grid-row");
